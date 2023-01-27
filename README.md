@@ -1,2 +1,1 @@
-# mid_year
-compsci mid year project
+# Mid_Year Comp. Sci. Project
