@@ -1,15 +1,19 @@
 from tkinter import *
-# import it
 
 class Application(Frame):
     def __init__(self, master):
         super(Application, self).__init__(master)
         self.grid()
         self.create_widgets()
-# create the things first
-
-
-
+    def create_widgets(self):
+        Label(self, text = "W ∞ rdle").grid(row=0, column=1, columnspan = 1, sticky=N)
+        self.person_ent = Entry(self)
+        self.person_ent.grid(row = 1, column =1, sticky = W) 
+        
+root = Tk()
+root.title("Homepage")
+app = Application(root)
+root.mainloop()
 
 
 
@@ -28,9 +32,6 @@ class Application(Frame):
 
 
     def create_widgets(self):
-        Label(self, text = "Enter information for a new story").grid(row=0, column=0, columnspan = 2, sticky=W)
-        self.person_ent = Entry(self)
-        self.person_ent.grid(row = 1, column =1, sticky = W)
 
         Label(self, text = "Person: ").grid(row=1, column=0, sticky=W)
         self.person_ent = Entry(self)
@@ -111,7 +112,4 @@ class Application(Frame):
         story += "mother"
         self.story_txt.delete(0.0, END)
         self.story_txt.insert(0.0, story)
-root = Tk()
-root.title("Mad Lib")
-app = Application(root)
-root.mainloop()
+
