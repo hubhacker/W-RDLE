@@ -6,4 +6,4 @@ class Word():
         self.word1 = word1
         file = open("midyear_5letterwords.txt")
 
-    def split_word():
+    def split_word()
