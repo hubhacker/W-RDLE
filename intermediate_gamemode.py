@@ -1,9 +1,19 @@
 import tkinter
+import random
 
-class Word():
+class Application (Frame):
 
-    def __init__(self, word1):
-        self.word1 = word1
-        file = open("midyear_5letterwords.txt")
+    def __init__(self, master):
+        super(Application, self).__init__(master)
+        self.grid()
+        self.create_widgets()
 
-    def split_word():
+    def choose_word(self, file): 
+        fiveletter = open(file)
+
+        self.fiveletterlist = []
+
+        for word in fiveletter:
+            self.fiveletterlist.append(word.strip())
+
+        self.word = self.fiveletterlist([random.randint(0, 1000)])
