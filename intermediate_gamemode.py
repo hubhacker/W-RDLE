@@ -8,9 +8,6 @@ class Application (Frame):
         self.grid()
         self.create_widgets()
 
-<<<<<<< HEAD
-    def split_word()
-=======
     def choose_word(self, file): 
         fiveletter = open(file)
 
@@ -20,4 +17,3 @@ class Application (Frame):
             self.fiveletterlist.append(word.strip())
 
         self.word = self.fiveletterlist([random.randint(0, 1000)])
->>>>>>> d0587f58f17bb62677afd6deb7fcb72f28a3449c
