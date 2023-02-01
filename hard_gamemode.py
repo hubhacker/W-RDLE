@@ -41,7 +41,7 @@ class Grid(Frame):
 
         
         
-        self..delete(0.0, END)
+        self.delete(0.0, END)
         self.story_txt.insert(0.0, story)
 
 
