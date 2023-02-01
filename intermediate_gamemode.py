@@ -1,12 +1,14 @@
-import tkinter
+from tkinter import *
 import random
 
 class Application (Frame):
 
-    def __init__(self, master):
+    def __init__(self, file, master):
         super(Application, self).__init__(master)
         self.grid()
         self.create_widgets()
+        self.file = file
+        file = open("midyear_5letterwords.txt")
 
     def choose_word(self, file): 
         fiveletter = open(file)
