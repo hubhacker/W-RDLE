@@ -1,18 +1,12 @@
 from tkinter import *
 import random
 
-class Grid:
+class Grid(Frame):
     
-    def create_widgets(self):
-        Label(self, text = 'Guess!:', font = 'Helvetica 15 bold', fg = "navy blue").grid(row = 'pass')
-        self.guess_ent = Entry(self)
-        self.guess_ent.grid(row = 'pass')
+    def __init__(self, master):
+        super().__init__(master)
+        self.create_widgets()
 
-class Word:
-    
-    def __init__(self, hardword):
-        self.hardword = hardword
-        
     def choose_word(self, file): 
         sixletter = open(file)
 
@@ -23,12 +17,38 @@ class Word:
 
         self.hardword = self.sixletterlist([random.randint(0, 1000)])
 
-class Guess:
+    def create_widgets(self):
+
+        # create label boxes here
+
+        Label()
+        
+        self.letter1 = Text(self, width = 100, height = 10, wrap = WORD)
+        self.letter1.grid(row = 8, column = 0, columnspan = 4)
+        self.letter2 = Text(self, width = 100, height = 10, wrap = WORD)
+        self.letter2.grid(row = 8, column = 0, columnspan = 4)
+        self.letter3 = Text(self, width = 100, height = 10, wrap = WORD)
+        self.letter3.grid(row = 8, column = 0, columnspan = 4)
+
+        
+
+    def check_guess(self):
+        
+        guess = self.guess_ent.get()
+        
+        while guess != self.hardword:
+
+
+        
+        
+        self..delete(0.0, END)
+        self.story_txt.insert(0.0, story)
+
+
+
+
     
-
-    guessed = False
-
-    while guessed == False:
+        
         
         
     
