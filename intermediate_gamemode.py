@@ -37,8 +37,7 @@ class Application (Frame):
         self.letter5 = Text(self, width = 100, height = 10, wrap = WORD)
         self.letter5.grid(row = 8, column = 4, columnspan = 4)
 
-        Label(self, text= "Guess!").grid(row = 6, column= 0, sticky = W+E)
-        self.guess_entry = Entry(self)
-        self.guess_entry.grid(row = 6, column= 1, columnspan= 1, sticky= W + E)
 
+    def guess_check(self):
 
+        guess = 
