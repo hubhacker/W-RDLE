@@ -32,7 +32,8 @@ class Application (Frame):
         self.letter2.grid(row = 8, column = 1, columnspan = 4)
         self.letter3 = Text(self, width = 100, height = 10, wrap = WORD)
         self.letter3.grid(row = 8, column = 2, columnspan = 4)
-        self.letter4 = Text(self, )
-        self.letter4.grid()
-        self.letter5 = Text(self, )
-        self.letter5.grid()
+        self.letter4 = Text(self, width = 100, height = 10, wrap = WORD)
+        self.letter4.grid(row = 8, column = 3, columnspan = 4)
+        self.letter5 = Text(self, width = 100, height = 10, wrap = WORD)
+        self.letter5.grid(row = 8, column = 4, columnspan = 4)
+
