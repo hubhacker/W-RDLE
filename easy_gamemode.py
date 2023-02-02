@@ -24,7 +24,7 @@ class Grid(Frame):
     
     def create_widgets(self):
 
-        Label()
+        Label(text="EASY MODE")
         
         self.letter1 = Text(self, width = 100, height = 10, wrap = WORD)
         self.letter1.grid(row = 8, column = 0, columnspan = 4)
