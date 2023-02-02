@@ -34,10 +34,6 @@ class Grid(Frame):
         self.letter3.grid(row = 8, column = 0, columnspan = 4)
         self.letter4 = Text(self, width = 100, height = 10, wrap = WORD)
         self.letter4.grid(row = 3, column = 3, columnspan = 4)
-        self.letter5 = Text(self, width = 100, height = 10, wrap = WORD)
-        self.letter5.grid(row = 3, column = 3, columnspan = 4)
-        self.letter6 = Text(self, width = 100, height = 10, wrap = WORD)
-        self.letter6.grid(row = 3, column = 3, columnspan = 4)
     
         Label(self, text = 'Guess: ').grid(row = 6, column = 0, sticky = W)
         self.guess_ent = Entry(self)
