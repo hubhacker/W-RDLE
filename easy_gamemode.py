@@ -24,16 +24,19 @@ class Grid(Frame):
     
     def create_widgets(self):
 
+        x=4
+
         Label(self, text = "EASY MODE").grid(row=0, column=1, columnspan = 1, sticky=N)
-        
-        self.letter1 = Text(self, width = 100, height = 10, wrap = WORD)
-        self.letter1.grid(row = 8, column = 0, columnspan = 4)
-        self.letter2 = Text(self, width = 100, height = 10, wrap = WORD)
-        self.letter2.grid(row = 8, column = 0, columnspan = 4)
-        self.letter3 = Text(self, width = 100, height = 10, wrap = WORD)
-        self.letter3.grid(row = 8, column = 0, columnspan = 4)
-        self.letter4 = Text(self, width = 100, height = 10, wrap = WORD)
-        self.letter4.grid(row = 3, column = 3, columnspan = 4)
+
+        for i in range(x):
+            self.letter1 = Text(self, width = 100, height = 10, wrap = WORD)
+            self.letter1.grid(row = 8, column = 0, columnspan = 4)
+            self.letter2 = Text(self, width = 100, height = 10, wrap = WORD)
+            self.letter2.grid(row = 8, column = 0, columnspan = 4)
+            self.letter3 = Text(self, width = 100, height = 10, wrap = WORD)
+            self.letter3.grid(row = 8, column = 0, columnspan = 4)
+            self.letter4 = Text(self, width = 100, height = 10, wrap = WORD)
+            self.letter4.grid(row = 3, column = 3, columnspan = 4)
     
         Label(self, text = 'Guess: ').grid(row = 6, column = 0, sticky = W)
         self.guess_ent = Entry(self)
@@ -47,7 +50,7 @@ class Grid(Frame):
         
         guess = self.guess_ent.get()
         ''
-        while guess != self.hardword:
+        while guess != self.easyword:
             pass
 
         letter = 
