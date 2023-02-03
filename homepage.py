@@ -7,7 +7,7 @@ class Application(Frame):
         self.create_widgets()
     def create_widgets(self):
         Label(self, text = "W ♾ RDLE", font=("Helvetica", 20),
-            width=20).grid(row=0, column=1, columnspan = 1, sticky=N)
+            width=20).grid(row=0, column=1, columnspan = 1)
         self.person_ent = Entry(self)
         self.person_ent.grid(row = 1, column =1, sticky = W) 
         
