@@ -7,10 +7,33 @@ class Application(Frame):
         self.create_widgets()
     def create_widgets(self):
         Label(self, text = "W ♾️ RDFINITY").grid(row=0, column=1, columnspan = 6, sticky=N) 
-        self.person_ent = Entry(self)
-        self.person_ent.grid(row = 1, column =1, sticky = W) 
 
-    tkinter.Label(self, text="WW ♾️ RDFINITY", font = ("Helvetica", 20), width=20).grid(row = 0, column = 1, columnspan=3. sticky= tkinter.N)
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+tkinter.Label(self, text="WW ♾️ RDFINITY", font = ("Helvetica", 20), width=20).grid(row = 0, column = 1, columnspan=3. sticky= tkinter.N)
         
 root = Tk()
 root.title("Homepage")
