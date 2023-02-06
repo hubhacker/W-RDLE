@@ -10,6 +10,7 @@ class Application(Frame):
         self.grid()
         self.create_widgets()
         
+        
     def create_widgets(self):
         Label(self, text = "W ♾ RDLE", font=("Helvetica", 60),
             width=20, fg = "green").grid(row=0, column=1, columnspan = 1, sticky=N)
