@@ -1,5 +1,8 @@
 from tkinter import *
-import tkinter as tk
+
+from easy_gamemode import Application
+from intermediate_gamemode import Application
+from hard_gamemode import Application
 
 class Application(Frame):
     def __init__(self, master):
@@ -31,7 +34,6 @@ class Application(Frame):
         pass
         
 root = Tk()
-root = tk.Tk()
 root.title("Homepage")
 app = Application(root)
 root.mainloop()
