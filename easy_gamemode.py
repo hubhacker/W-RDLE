@@ -1,7 +1,7 @@
 from tkinter import *
 import random
 
-class Grid(Frame):
+class Application(Frame):
 
     def __init__(self,master,file):
 
