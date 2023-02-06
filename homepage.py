@@ -16,7 +16,7 @@ class Application(Frame):
             width=20, fg = "green").grid(row=0, column=1, columnspan = 1, sticky=N)
         
         #Label(self, text= "Easy Mode!", font = "Century 13" , fg = "HotPink3").grid(row = 5, column = 1)
-        Button(self, text = "Easy Mode!", command = self.easy_mode, font =, fg = ).grid(row = , column = , sticky = )
+        Button(self, text = "Easy Mode!", command = self., font =, fg = ).grid(row = , column = , sticky = )
 
         #Label(self, text = "Intermediate Mode!", font = "Century 13", fg = "DarkOrchid2").grid(row = 5, column = 2)
         Button(self, text = "Intermediate Mode!", command = self.intermediate_mode, font =, fg = ).grid(row = , column = , sticky = )
@@ -25,13 +25,13 @@ class Application(Frame):
         Button(self, text = "Hard Mode!", command = self.hard_mode, font =, fg = ).grid(row = , column = , sticky = )
 
 
-    def easy_mode(self):
+    def setup_easy():
         pass
 
-    def intermediate_mode(self):
+    def setup_intermediate():
         pass
 
-    def hard_mode(self):
+    def setup_hard():
         pass
         
 root = Tk()
