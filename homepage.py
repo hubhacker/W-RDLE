@@ -6,7 +6,7 @@ class Application(Frame):
         self.grid()
         self.create_widgets()
     def create_widgets(self):
-        Label(self, text = "W ♾️ RDFINITY").grid(row=0, column=1, columnspan = 6, sticky=N) 
+        Label(self, text = "W ♾️ RDFINITY").grid(row=0, column=1, columnspan = 6, sticky=N)
 
 
 

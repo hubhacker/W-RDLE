@@ -35,16 +35,9 @@ class Grid(Frame):
             self.letter6 = Text(self, width = 10, height = 10, wrap = WORD)
             self.letter6.grid(row = 3, column = 5, columnspan = 4)
 
-    # enter trigger
-    
-        # create entry box here
-        Label(self, text = 'Guess: ').grid(row = 8, column = 0, sticky = W)
-        self.guess_ent = Entry(self)
-        self.guess_ent.grid(row = 8, column = 1, sticky = W, columnspan=1)
-
+        # enter trigger
         # create submit button
-        Button(self, text= 'Submit!', fg='#FFFFFF', bg='#94add6', command = self.check_guess).grid(row = 9, column = 0, sticky = W)
-
+        
         win.bind('<Return>', variable = self.check_guess)
 
     def check_guess(event, self):
