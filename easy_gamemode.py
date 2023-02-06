@@ -41,7 +41,7 @@ class Application(Frame):
         Label(self, text = 'Guess: ').grid(row = 6, column = 0, sticky = W)
         self.guess_ent = Entry(self)
         self.guess_ent.grid(row = 6, column = 1, sticky = W, columnspan=1)
-
+        
         # create submit button
         Button(self, text= 'Submit!', fg='#FFFFFF', bg='#94add6', command = self.check_guess).grid(row = 7, column = 0, sticky = W)
 
