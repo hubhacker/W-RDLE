@@ -9,9 +9,9 @@ class Application(Frame):
         Label(self, text = "W ♾ RDLE", font=("Helvetica", 20),
             width=20, fg = "green").grid(row=0, column=1, columnspan = 1, sticky=W+E)
         
-        Label(self, text= "Easy Mode!", font = "Century 13" , fg = ).grid()
-        Label(self, text = "Intermediate Mode!", font = "Century 13", fg = ).grid()
-        Label(self, text= "Hard Mode!", font = "Century 13", fg =).grid()
+        Label(self, text= "Easy Mode", font = "Century 13" , fg = ).grid()
+        Label(self, text = "Intermediate Mode", font = "Century 13", fg = ).grid()
+        Label(self, text= "Hard Mode", font = "Century 13", fg =).grid()
 
         
 root = Tk()
