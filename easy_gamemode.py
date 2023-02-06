@@ -44,16 +44,18 @@ class Application(Frame):
         
         # create submit button
         Button(self, text= 'Submit!', fg='#FFFFFF', bg='#94add6', command = self.check_guess).grid(row = 7, column = 0, sticky = W)
-
-
-    def check_guess(self):
+        
+    def check_guess(self): # callback function
         
         guess = self.guess_ent.get()
         ''
-        while guess != self.easyword:
+        while guess != self.hardword:
             pass
-
-        letter = 
+        
+        word_single = []
+        for i in guess:
+            word_single.append(i)
+        letter = Label[i] = i
         
         self.delete(0.0, END)
         self.letter1.insert(0.0, letter)
