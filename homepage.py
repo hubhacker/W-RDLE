@@ -39,6 +39,9 @@ class Application(Frame):
 
     def setup_hard(self):
         pass
+
+    def setup_shop(self):
+        pass
         
 root = Tk()
 root.title("Homepage")

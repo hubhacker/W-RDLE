@@ -49,8 +49,9 @@ class Application(Frame):
         
         guess = self.guess_ent.get()
         ''
-        while guess != self.hardword:
-            pass
+        while guess != self.easyword:
+            letter=guess.split()
+            if self.easyword[i]==
         
         word_single = []
         for i in guess:
