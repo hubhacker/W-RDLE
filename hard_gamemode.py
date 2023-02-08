@@ -20,7 +20,36 @@ class Application(Frame):
     def create_widgets(self):
         # create label boxes here
         
-        self.letter1w1 = Text(self, width = 10, height = 10, wrap = WORD)
+        
+
+        Label(self).grid(row = 1, column = 0, sticky = W)
+        self.name_ent = Entry(self)
+        self.name_ent.grid(row = 1, column = 1, sticky = W)
+
+    def check_guess(self): # callback function
+        
+        guess = self.guess_ent.get()
+        ''
+        while guess != self.hardword:
+            pass
+        
+        word_single = []
+        for i in guess:
+            word_single.append(i)
+        letter = Label[i] = i
+        
+        self.delete(0.0, END)
+        self.letter1.insert(0.0, letter)
+
+    def show_msg(event):
+        Label["text"]="Sale Up to 50% Off!"
+
+    
+win = Tk()
+        
+        
+systema
+print("""self.letter1w1 = Text(self, width = 10, height = 10, wrap = WORD)
         self.letter1w1.grid(row = 3, column = 0, columnspan = 4)
         self.letter2w1 = Text(self, width = 10, height = 10, wrap = WORD)
         self.letter2w1.grid(row = 3, column = 1, columnspan = 4)
@@ -83,31 +112,6 @@ class Application(Frame):
         self.letter5w5 = Text(self, width = 10, height = 10, wrap = WORD)
         self.letter5w5.grid(row = 3, column = 4, columnspan = 4)
         self.letter6w5 = Text(self, width = 10, height = 10, wrap = WORD)
-        self.letter6w5.grid(row = 3, column = 5, columnspan = 4)
-
-
-
-    def check_guess(self): # callback function
-        
-        guess = self.guess_ent.get()
-        ''
-        while guess != self.hardword:
-            pass
-        
-        word_single = []
-        for i in guess:
-            word_single.append(i)
-        letter = Label[i] = i
-        
-        self.delete(0.0, END)
-        self.letter1.insert(0.0, letter)
-
-    def show_msg(event):
-        Label["text"]="Sale Up to 50% Off!"
-
-    
-win = Tk()
-        
-        
+        self.letter6w5.grid(row = 3, column = 5, columnspan = 4)")""")
     
 
