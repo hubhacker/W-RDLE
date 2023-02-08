@@ -5,6 +5,11 @@ class GameManager (object):
         self.root = Tk()
         self.screen = None
 
-    def home_screen (self):
+    def setup_homescreen (self):
         self.root.title ("Select game mode:")
-        self.difficulties = Difficulties ("difficulty.txt")
+def main():
+    game = GameManager()
+    game.setup_homescreen()
+    game.root.mainloop()
+ 
+main()
