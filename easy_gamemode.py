@@ -49,7 +49,7 @@ class Application(Frame):
         
         guess = self.guess_ent.get()
         ''
-        while guess != self.hardword:
+        while guess != self.easyword:
             pass
         
         word_single = []
