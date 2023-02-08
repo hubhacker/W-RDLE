@@ -7,4 +7,4 @@ class GameManager (object):
 
     def home_screen (self):
         self.root.title ("Select game mode:")
-        self.difficulties
+        self.difficulties = Difficulties ("difficulty.txt")
