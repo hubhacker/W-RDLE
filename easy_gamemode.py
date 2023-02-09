@@ -35,7 +35,10 @@ class Easy(Frame):
         self.letter4.grid(row = 3, column = 3, columnspan = 4)
     
         Label(self, text = 'Guess: ').grid(row = 6, column = 0, sticky = W)
-        self.guess_ent = Entry(self)
+        self.gletter1 = Entry(self)
+        self.gletter2 = Entry(self)
+        self.gletter3 = Entry(self)
+        self.gletter4 = Entry(self)
         self.guess_ent.grid(row = 6, column = 1, sticky = W, columnspan=1)
         
         # create submit button
