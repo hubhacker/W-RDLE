@@ -6,7 +6,7 @@ from hard_gamemode import Application
 from shop import Application
 
 class Application(Frame):
-    def __init__(self, master):
+    def __init__(self, master, callback_on_easy, callback_on_intermediate, callback_on_hard):
         super(Application, self).__init__(master)
         self.grid()
         self.create_widgets()
