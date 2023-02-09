@@ -5,7 +5,7 @@ class Easy(Frame):
 
     def __init__(self,master):
 
-        super(self).__init__(master)
+        super(Easy, self).__init__(master)
         self.grid()
         self.create_widgets()
         self.file=("midyear_4letterwords.txt")
@@ -23,26 +23,16 @@ class Easy(Frame):
     
     def create_widgets(self):
 
-        Label(self, text = "EASY MODE").grid(row=0, column=1, columnspan = 1, sticky=N)
+        Label(self, text = "EASY MODE").grid(row=0, column=1, sticky=N)
 
-        self.letter1 = Text(self, width = 100, height = 10, wrap = WORD)
-        self.letter1.grid(row = 8, column = 0, columnspan = 4)
-        self.letter2 = Text(self, width = 100, height = 10, wrap = WORD)
-        self.letter2.grid(row = 8, column = 0, columnspan = 4)
-        self.letter3 = Text(self, width = 100, height = 10, wrap = WORD)
-        self.letter3.grid(row = 8, column = 0, columnspan = 4)
-        self.letter4 = Text(self, width = 100, height = 10, wrap = WORD)
-        self.letter4.grid(row = 3, column = 3, columnspan = 4)
-    
-        Label(self, text = 'Guess: ').grid(row = 6, column = 0, sticky = W)
-        self.gletter1 = Entry(self)
-        self.gletter2 = Entry(self)
-        self.gletter3 = Entry(self)
-        self.gletter4 = Entry(self)
-        self.guess_ent.grid(row = 6, column = 1, sticky = W, columnspan=1)
-        
-        # create submit button
-        Button(self, text= 'Submit!', fg='#FFFFFF', bg='#94add6', command = self.check_guess).grid(row = 7, column = 0, sticky = W)
+        self.letter1 = Text(self, width = 10, height = 10, wrap = WORD)
+        self.letter1.grid(row = 5, column = 0, columnspan = 1)
+        self.letter2 = Text(self, width = 10, height = 10, wrap = WORD)
+        self.letter2.grid(row = 5, column = 1, columnspan = 1)
+        self.letter3 = Text(self, width = 10, height = 10, wrap = WORD)
+        self.letter3.grid(row = 5, column = 2, columnspan = 1)
+        self.letter4 = Text(self, width = 10, height = 10, wrap = WORD)
+        self.letter4.grid(row = 5, column = 3, columnspan = 1)
         
     def check_guess(self): # callback function
         
@@ -58,3 +48,8 @@ class Easy(Frame):
         
         self.delete(0.0, END)
         self.letter1.insert(0.0, letter)
+
+root = Tk()
+root.title("Easy")
+app = Easy(root)
+root.mainloop()
