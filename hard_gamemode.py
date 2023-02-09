@@ -47,7 +47,7 @@ class Hard(Frame):
 win = Tk()
         
         
-systema
+system
 print("""self.letter1w1 = Text(self, width = 10, height = 10, wrap = WORD)
         self.letter1w1.grid(row = 3, column = 0, columnspan = 4)
         self.letter2w1 = Text(self, width = 10, height = 10, wrap = WORD)
