@@ -17,7 +17,7 @@ class GameManager (object):
                                   callback_hompage = self.onclose_homepage)
     def onclose_homepage(self):
         self.screen.destroy()
-        self.screen= Easy()
+        self.screen= Easy(master = self.root, )
         
 
 def main():
