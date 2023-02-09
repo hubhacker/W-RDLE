@@ -1,7 +1,7 @@
 from tkinter import *
 import random
 
-class Application(Frame):
+class Easy(Frame):
 
     def __init__(self,master,file):
 

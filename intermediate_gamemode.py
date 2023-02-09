@@ -1,11 +1,11 @@
 from tkinter import *
 import random
 
-class Application (Frame):
+class Intermediate(Frame):
 
     def __init__(self, file, master):
 
-        super(Application, self).__init__(master)
+        super(Intermediate, self).__init__(master)
         self.grid()
         self.create_widgets()
         self.file = file

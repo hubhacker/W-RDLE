@@ -1,7 +1,7 @@
 from tkinter import *
 import random
 
-class Application(Frame):
+class Hard(Frame):
     
     def __init__(self, master):
         super().__init__(master)
@@ -22,9 +22,8 @@ class Application(Frame):
         
         
 
-        Label(self).grid(row = 1, column = 0, sticky = W)
-        self.name_ent = Entry(self)
-        self.name_ent.grid(row = 1, column = 1, sticky = W)
+        for i in range(36):
+
 
     def check_guess(self): # callback function
         
