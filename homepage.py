@@ -31,7 +31,9 @@ class Application(Frame):
 
 
     def setup_easy(self):
+        # changes the window's title
         root.title ("Easy Mode!")
+
         self.easy_screen = Application(master = root, )
 
     def setup_intermediate(self):
@@ -43,7 +45,7 @@ class Application(Frame):
     def setup_shop(self):
         pass
         
-root = Tk()
+root = Tk() 
 root.title("Homepage")
 app = Application(root)
 root.mainloop()
