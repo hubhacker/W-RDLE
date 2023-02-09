@@ -40,4 +40,4 @@ class Intermediate(Frame):
 
     def guess_check(self):
 
-        guess = 
+        pass
