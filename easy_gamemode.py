@@ -25,14 +25,23 @@ class Easy(Frame):
 
         Label(self, text = "EASY MODE").grid(row=0, column=1, sticky=N)
 
-        self.letter1 = Text(self, width = 10, height = 10, wrap = WORD)
+        self.letter1 = Text(self, width = 10, height = 5, wrap = WORD)
         self.letter1.grid(row = 5, column = 0, columnspan = 1)
-        self.letter2 = Text(self, width = 10, height = 10, wrap = WORD)
+        self.letter2 = Text(self, width = 10, height = 5, wrap = WORD)
         self.letter2.grid(row = 5, column = 1, columnspan = 1)
-        self.letter3 = Text(self, width = 10, height = 10, wrap = WORD)
+        self.letter3 = Text(self, width = 10, height = 5, wrap = WORD)
         self.letter3.grid(row = 5, column = 2, columnspan = 1)
-        self.letter4 = Text(self, width = 10, height = 10, wrap = WORD)
+        self.letter4 = Text(self, width = 10, height = 5, wrap = WORD)
         self.letter4.grid(row = 5, column = 3, columnspan = 1)
+
+        self.letter5 = Text(self, width = 10, height = 5, wrap = WORD)
+        self.letter5.grid(row = 11, column = 0, columnspan = 1)
+        self.letter6 = Text(self, width = 10, height = 5, wrap = WORD)
+        self.letter6.grid(row = 11, column = 1, columnspan = 1)
+        self.letter7 = Text(self, width = 10, height = 5, wrap = WORD)
+        self.letter7.grid(row = 11, column = 2, columnspan = 1)
+        self.letter8 = Text(self, width = 10, height = 5, wrap = WORD)
+        self.letter8.grid(row = 11, column = 3, columnspan = 1)
         
     def check_guess(self): # callback function
         
