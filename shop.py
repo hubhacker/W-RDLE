@@ -1,6 +1,6 @@
 from tkinter import *
 
-class Application(Frame):
+class Shop(Frame):
     
     def __init__(self,master):
         pass
