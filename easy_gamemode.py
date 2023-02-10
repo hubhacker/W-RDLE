@@ -25,7 +25,7 @@ class Easy(Frame):
 
         Label(self, text = "EASY MODE").grid(row=0, column=1, sticky=N)
 
-        self.letter1 = Text(self, width = 10, height = 5, wrap = WORD, font = ("Ariel", 15))
+        self.letter1 = Text(self, width = 10, height = 5, wrap = WORD, font = ("Ariel"), bg = "#F8EDEB")
         self.letter1.grid(row = 5, column = 0, columnspan = 1)
         self.letter2 = Text(self, width = 10, height = 5, wrap = WORD)
         self.letter2.grid(row = 5, column = 1, columnspan = 1)
