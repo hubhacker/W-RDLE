@@ -95,6 +95,6 @@ class Easy(Frame):
         self.letter1.insert(0.0, letter)
 
 root = Tk()
-root.title("Easy")
+root.title("Easy Mode")
 app = Easy(root)
 root.mainloop()
