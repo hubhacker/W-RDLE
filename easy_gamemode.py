@@ -79,7 +79,7 @@ class Easy(Frame):
         self.letter24 = Text(self, width = 10, height = 5, wrap = WORD)
         self.letter24.grid(row = 35, column = 3, columnspan = 1)
         
-    def check_guess(self):
+    def check_guess(self): # callback function
         
         guess = self.guess_ent.get()
         
