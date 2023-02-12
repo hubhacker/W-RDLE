@@ -1,5 +1,6 @@
 from tkinter import *
 import random
+import tkinter.messagebox
 
 class Intermediate(Frame):
 

@@ -31,10 +31,7 @@ class Application(Frame):
 
 
     def setup_easy(self):
-        # changes the window's title
-        root.title ("Easy Mode!")
-
-        self.easy_screen = Application(master = root, )
+        pass
 
     def setup_intermediate(self):
         pass
