@@ -7,7 +7,7 @@ from hard_gamemode import Hard
 
 class GameManager (object):
     def __init__(self):
-        self.root = Tk()
+        self.grid()
         self.screen = None
 
 
@@ -15,6 +15,7 @@ class GameManager (object):
         self.root.title ("Select game mode:")
         self.screen = Application(self, master= self.root,
                                   callback_hompage = self.onclose_homepage)
+        self.screen = GameManager(self, master= self.root, callback_homepage = self.onclose_homepage)
     def onclose_homepage(self):
         self.screen.destroy()
         self.screen = Easy(self, master= self.root, 
