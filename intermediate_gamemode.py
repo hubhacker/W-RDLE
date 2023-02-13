@@ -28,7 +28,7 @@ class Intermediate(Frame):
         Label(self, text= "INTERMEDIATE MODE").place(row = 0, column= 1, columnspan= 1, sticky = W+E)
 
         self.letter1 = Text(self, width = 10, height = 5, wrap = WORD, font = ("Consolas"), bg = "#CDB4DB")
-        self.letter1.place(row = 5, column = 0, columnspan = 1)
+        self.letter1.place(relx = 1, rely= = 0, columnspan = 1)
 
         self.letter2 = Text(self, width = 10, height = 5, wrap = WORD, font = ("Consolas"), bg = "#CDB4DB")
         self.letter2.place(row = 5, column = 1, columnspan = 1)
