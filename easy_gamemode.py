@@ -21,8 +21,18 @@ class Easy(Frame):
         self.easyword = self.fourletterList([random.randint(0, 1000)])
     
     def create_widgets(self):
+        
+        root.title("Easy Mode")
+        root.geometry("400x600")
+        root.maxsize(400, 600)
+        root.config(bg = "#F8EDEB")
 
-        Label(root, text = "EASY MODE", font=("Consolas", 13)).place(relx = 0, anchor = N)
+        self.frame = Frame(root, width = 300, height = 400, bg = "#F9DCC4")
+        self.frame.place(x = 20, y = 20, relx = 0.08, rely = 0.08)
+
+        Label(self.frame, text = "EASY MODE", font=("Consolas", 13), bg = "#F9DCC4").place(relx = 0.5, rely = 0.05, anchor = N)
+
+        
 
         self.letter1 = Text(root, width = 10, height = 5, wrap = WORD, font = ("Consolas"), bg = "#F8EDEB")
         self.letter1.place(x = 5, y = 1, anchor = N)
