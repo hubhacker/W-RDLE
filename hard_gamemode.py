@@ -88,14 +88,27 @@ class Hard(Frame):
         self.letter6w5 = Text(self, height = 5, width = 10, wrap = WORD)
         self.letter6w5.grid(row = 3, column = 5, columnspan = 1)
 
-        self.letter1w1 = Entry(self)
-        self.letter1w1.grid(row = 20, column = 0, columnspan = 1)
 
-    def check_guess(self): # callback function
+        self.test = Text(self, height = 5, width = 10, wrap = WORD)
+        self.test.grid(row = 7, column = 5, columnspan = 1)
+
+        Button(self, height=5, width=10, text="Comment", command= self.get_input()).grid(row = 8, column = 0, sticky = W)
+
         
-        guess = self.guess_ent.get()
-        ''
-        while guess != self.hardword:
+
+    def retrieve_input(self):
+        input = self.letter1w1.get("1.0",END)
+
+    
+
+
+    # def check_guess(self): # callback function
+        
+        """testing = self.letter1w1.get()
+        self.test.delete(0.0, END)
+        self.test.insert(0.0, testing+'omg')"""
+        
+        """while guess != self.hardword:
             pass
         
         word_single = []
@@ -104,11 +117,7 @@ class Hard(Frame):
         letter = Label[i] = i
         
         self.delete(0.0, END)
-        self.letter1.insert(0.0, letter)
-
-    def show_msg(event):
-        Label["text"]="Sale Up to 50% Off!"
-
+        self.letter1.insert(0.0, letter)"""
     
 root = Tk()
 root.title("Hard")
