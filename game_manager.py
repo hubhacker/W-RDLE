@@ -7,7 +7,7 @@ from hard_gamemode import Hard
 
 class GameManager (object):
     def __init__(self):
-        self.grid()
+        self.place()
         self.screen = None
 
 
