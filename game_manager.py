@@ -13,11 +13,14 @@ class GameManager (object):
 
     def setup_homescreen (self):
         self.root.title ("Select game mode:")
+        self.screen = Application(self, master= self.root,
+                                  callback_hompage = self.onclose_homepage)
         self.screen = GameManager(self, master= self.root, callback_homepage = self.onclose_homepage)
     def onclose_homepage(self):
         self.screen.destroy()
-        self.screen= Easy(master = self.root, )
-
+        self.screen = Easy(self, master= self.root, 
+                           callback_easy= self.onclose_easy)
+        
 
 def main():
     game = GameManager()
