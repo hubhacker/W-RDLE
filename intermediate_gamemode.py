@@ -1,6 +1,5 @@
 from tkinter import *
 import random
-import tkinter.messagebox
 
 class Intermediate(Frame):
 
@@ -24,6 +23,14 @@ class Intermediate(Frame):
 
     
     def create_widgets(self):
+
+        root.title("Intermediate Mode")
+        root.geometry("400x600")
+        root.maxsize(400, 600)
+        root.config(bg = "")
+
+        self.frame = Frame(root, width = 300, height = 400, bg = "#F9DCC4")
+        self.frame.place(x = 20, y = 20, relx = 0.08, rely = 0.08)
 
         Label(self, text= "INTERMEDIATE MODE").place(x = 0, column= 1, columnspan= 1, sticky = W+E)
 
