@@ -22,7 +22,7 @@ class Easy(Frame):
     
     def create_widgets(self):
         
-        root.title("Easy Mode")
+        root.title("EASY MODE")
         root.geometry("400x600")
         root.maxsize(400, 600)
         root.config(bg = "#F8EDEB")
@@ -103,6 +103,6 @@ class Easy(Frame):
         self.letter1.insert(0.0, letter)
 
 root = Tk()
-root.title("Easy Mode")
+root.title("EASY MODE")
 app = Easy(root)
 root.mainloop()
