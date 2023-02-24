@@ -33,19 +33,22 @@ class Intermediate(Frame):
 
         Label(self.frame, text = "INTERMEDIATE MODE", font=("Consolas", 13), bg = "pink").place(relx = 0.5, rely = 0.05, anchor = N) # vivian i will change the color later, i can't rn bc i have no wifi
 
-        rel_x = 0.10
+        rel_x = 0.1
         rel_y = 0.14
         for i in range(1,6):
             self.letter1 = Text(self.frame, width = 4, height = 2.4, font = ("Consolas"), bg = "#F8EDEB") # I'LL CHANGE BG LATER
             self.letter1.place(relx = rel_x, rely = rel_y, anchor = N)
+
             self.letter2 = Text(self.frame, width = 4, height = 2.4, font = ("Consolas"), bg = "#F8EDEB") # I'LL CHANGE BG LATER
-            self.letter2.place(relx = 0.30, rely = 0.14, anchor = N)
+            self.letter2.place(relx = rel_x * 3, rely = rel_y, anchor = N)
             self.letter3 = Text(self.frame, width = 4, height = 2.4, font = ("Consolas"), bg = "#F8EDEB") # I'LL CHANGE BG LATER
-            self.letter3.place(relx = 0.50, rely = 0.14, anchor = N)
+            self.letter3.place(relx = rel_x * 5, rely = rel_y, anchor = N)
             self.letter4 = Text(self.frame, width = 4, height = 2.4, font = ("Consolas"), bg = "#F8EDEB") # I'LL CHANGE BG LATER
-            self.letter4.place(relx = 0.70, rely = 0.14, anchor = N)
+            self.letter4.place(relx = rel_x *7, rely = rel_y, anchor = N)
             self.letter5 = Text(self.frame, width = 4, height = 2.4, font = ("Consolas"), bg = "#F8EDEB") # I'LL CHANGE BG LATER
-            self.letter5.place(relx = 0.90, rely = 0.14, anchor = N)
+            self.letter5.place(relx = rel_x * 9, rely = rel_y, anchor = N)
+
+            rel_y += 0.14
         
     def guess_ent(self):
         pass
