@@ -20,50 +20,39 @@ class Hard(Frame):
         self.hardword = self.sixletterlist([random.randint(0, 1000)])
 
     def create_widgets(self):
-        # create label boxes here
-        fram  =  Frame(root,  width=1370,  height=1500,  bg='grey')
-        fram.place(x=0,  y=0,  relx=0,  rely=0)
+        root.title("HARD MODE")
+        root.geometry("400x600")
+        root.maxsize(400, 600)
+        root.config(bg = "#F8EDEB")
 
-        Label(fram, text = "HARD MODE", font=("Consolas", 50)).place(x=685, y= 50, anchor = CENTER)
+        self.frame = Frame(root, width = 300, height = 500, bg = "#4f7aa8")
+        self.frame.place(x = 20, y = 20, relx = 0.08, rely = 0.08)
 
-        boxes = Frame(fram, width = 730, height = 615, bg = 'lightgrey')
-        boxes.place(x=685, y = 700, anchor = S)
+        Label(self.frame, text = "HARD MODE", font=("Consolas", 13), bg = "#4f7aa8").place(relx = 0.5, rely = 0.05, anchor = N)
 
+        rel_x = .1
+        rel_y = .14
 
-        self.letter1 = Text(boxes, width = 10, height = 5, wrap = WORD, font = ("Consolas", 15), bg = "#F8EDEB").place(in_= boxes, relx = .01, rely = .01, anchor = N+W)
-        self.letter2 = Text(boxes, width = 10, height = 5, wrap = WORD, font = ("Consolas", 15), bg = "#F8EDEB").place(in_= boxes, relx = .01, rely = .01, x=120, anchor = N+W)
-        self.letter3 = Text(boxes, width = 10, height = 5, wrap = WORD, font = ("Consolas", 15), bg = "#F8EDEB").place(in_= boxes, relx = .01, rely = .01, x = 240, anchor = N+W)
-        self.letter4 = Text(boxes, width = 10, height = 5, wrap = WORD, font = ("Consolas", 15), bg = "#F8EDEB").place(in_= boxes, relx = .01, rely = .01, x = 360, anchor = N+W)
-        self.letter5 = Text(boxes, width = 10, height = 5, wrap = WORD, font = ("Consolas", 15), bg = "#F8EDEB").place(in_= boxes, relx = .01, rely = .01, x= 480, anchor = N+W)
-        self.letter6 = Text(boxes, width = 10, height = 5, wrap = WORD, font = ("Consolas", 15), bg = "#F8EDEB").place(in_= boxes, relx = .01, rely = .01, x=600, anchor = N+W)
+        #self.testletter = Entry(self.frame, width = 4, height = 2.4, font = ("Consolas"), bg = "#F8EDEB")
+        #self.testletter.place(relx = 1, rely = .84, anchor = N)
 
-        self.letter7 = Text(boxes, width = 10, height = 5, wrap = WORD, font = ("Consolas", 15), bg = "#F8EDEB").place(in_= boxes, relx = .01, rely = .01, x= 0, y= 130, anchor = N+W)
-        self.letter8 = Text(boxes, width = 10, height = 5, wrap = WORD, font = ("Consolas", 15), bg = "#F8EDEB").place(in_= boxes, relx = .01, rely = .01, x=120, y = 130, anchor = N+W)
-        self.letter9 = Text(boxes, width = 10, height = 5, wrap = WORD, font = ("Consolas", 15), bg = "#F8EDEB").place(in_= boxes, relx = .01, rely = .01, x = 240, y = 130, anchor = N+W)
-        self.letter10 = Text(boxes, width = 10, height = 5, wrap = WORD, font = ("Consolas", 15), bg = "#F8EDEB").place(in_= boxes, relx = .01, rely = .01, x = 360, y = 130, anchor = N+W)
-        self.letter11 = Text(boxes, width = 10, height = 5, wrap = WORD, font = ("Consolas", 15), bg = "#F8EDEB").place(in_= boxes, relx = .01, rely = .01, x= 480, y = 130, anchor = N+W)
-        self.letter12 = Text(boxes, width = 10, height = 5, wrap = WORD, font = ("Consolas", 15), bg = "#F8EDEB").place(in_= boxes, relx = .01, rely = .01, x=600, y = 130, anchor = N+W)
-       
-        self.letter7 = Text(boxes, width = 10, height = 5, wrap = WORD, font = ("Consolas", 15), bg = "#F8EDEB").place(in_= boxes, relx = .01, rely = .01, x= 0, y= 260, anchor = N+W)
-        self.letter8 = Text(boxes, width = 10, height = 5, wrap = WORD, font = ("Consolas", 15), bg = "#F8EDEB").place(in_= boxes, relx = .01, rely = .01, x=120, y = 260, anchor = N+W)
-        self.letter9 = Text(boxes, width = 10, height = 5, wrap = WORD, font = ("Consolas", 15), bg = "#F8EDEB").place(in_= boxes, relx = .01, rely = .01, x = 240, y = 260, anchor = N+W)
-        self.letter10 = Text(boxes, width = 10, height = 5, wrap = WORD, font = ("Consolas", 15), bg = "#F8EDEB").place(in_= boxes, relx = .01, rely = .01, x = 360, y = 260, anchor = N+W)
-        self.letter11 = Text(boxes, width = 10, height = 5, wrap = WORD, font = ("Consolas", 15), bg = "#F8EDEB").place(in_= boxes, relx = .01, rely = .01, x= 480, y = 260, anchor = N+W)
-        self.letter12 = Text(boxes, width = 10, height = 5, wrap = WORD, font = ("Consolas", 15), bg = "#F8EDEB").place(in_= boxes, relx = .01, rely = .01, x=600, y = 260, anchor = N+W)
-
-        self.letter7 = Text(boxes, width = 10, height = 5, wrap = WORD, font = ("Consolas", 15), bg = "#F8EDEB").place(in_= boxes, relx = .01, rely = .01, x= 0, y= 390, anchor = N+W)
-        self.letter8 = Text(boxes, width = 10, height = 5, wrap = WORD, font = ("Consolas", 15), bg = "#F8EDEB").place(in_= boxes, relx = .01, rely = .01, x=120, y = 390, anchor = N+W)
-        self.letter9 = Text(boxes, width = 10, height = 5, wrap = WORD, font = ("Consolas", 15), bg = "#F8EDEB").place(in_= boxes, relx = .01, rely = .01, x = 240, y = 390, anchor = N+W)
-        self.letter10 = Text(boxes, width = 10, height = 5, wrap = WORD, font = ("Consolas", 15), bg = "#F8EDEB").place(in_= boxes, relx = .01, rely = .01, x = 360, y = 390, anchor = N+W)
-        self.letter11 = Text(boxes, width = 10, height = 5, wrap = WORD, font = ("Consolas", 15), bg = "#F8EDEB").place(in_= boxes, relx = .01, rely = .01, x= 480, y = 390, anchor = N+W)
-        self.letter12 = Text(boxes, width = 10, height = 5, wrap = WORD, font = ("Consolas", 15), bg = "#F8EDEB").place(in_= boxes, relx = .01, rely = .01, x=600, y = 390, anchor = N+W)
-       
-        self.letter7 = Text(boxes, width = 10, height = 5, wrap = WORD, font = ("Consolas", 15), bg = "#F8EDEB").place(in_= boxes, relx = .01, rely = .01, x= 0, y= 520, anchor = N+W)
-        self.letter8 = Text(boxes, width = 10, height = 5, wrap = WORD, font = ("Consolas", 15), bg = "#F8EDEB").place(in_= boxes, relx = .01, rely = .01, x=120, y = 520, anchor = N+W)
-        self.letter9 = Text(boxes, width = 10, height = 5, wrap = WORD, font = ("Consolas", 15), bg = "#F8EDEB").place(in_= boxes, relx = .01, rely = .01, x = 240, y = 520, anchor = N+W)
-        self.letter10 = Text(boxes, width = 10, height = 5, wrap = WORD, font = ("Consolas", 15), bg = "#F8EDEB").place(in_= boxes, relx = .01, rely = .01, x = 360, y = 520, anchor = N+W)
-        self.letter11 = Text(boxes, width = 10, height = 5, wrap = WORD, font = ("Consolas", 15), bg = "#F8EDEB").place(in_= boxes, relx = .01, rely = .01, x= 480, y = 520, anchor = N+W)
-        self.letter12 = Text(boxes, width = 10, height = 5, wrap = WORD, font = ("Consolas", 15), bg = "#F8EDEB").place(in_= boxes, relx = .01, rely = .01, x=600, y = 520, anchor = N+W)
+        self.test_ent = Entry(self.frame)
+        self.test_ent.place(relx = 1, rely = .84, anchor = N)
+        for i in range(0, 6):
+            self.letter1 = Text(self.frame, width = 4, height = 2.4, font = ("Consolas"), bg = "#c3d1e0")
+            self.letter1.place(relx = rel_x, rely = rel_y, anchor = N)
+            self.letter2 = Text(self.frame, width = 4, height = 2.4, font = ("Consolas"), bg = "#c3d1e0")
+            self.letter2.place(relx = rel_x + 0.15, rely = rel_y, anchor = N)
+            self.letter3 = Text(self.frame, width = 4, height = 2.4, font = ("Consolas"), bg = "#c3d1e0")
+            self.letter3.place(relx = rel_x +.3, rely = rel_y, anchor = N)
+            self.letter4 = Text(self.frame, width = 4, height = 2.4, font = ("Consolas"), bg = "#c3d1e0")
+            self.letter4.place(relx = rel_x+.45, rely = rel_y, anchor = N)
+            self.letter5 = Text(self.frame, width = 4, height = 2.4, font = ("Consolas"), bg = "#c3d1e0")
+            self.letter5.place(relx = rel_x+.6, rely = rel_y, anchor = N)
+            self.letter6 = Text(self.frame, width = 4, height = 2.4, font = ("Consolas"), bg = "#c3d1e0")
+            self.letter6.place(relx = rel_x+.75, rely = rel_y, anchor = N)
+            
+            rel_y += .14
 
     def retrieve_input(self):
         input = self.letter1.get("1.0",END)
