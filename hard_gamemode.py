@@ -20,72 +20,44 @@ class Hard(Frame):
         self.hardword = self.sixletterlist([random.randint(0, 1000)])
 
     def create_widgets(self):
-        # create label boxes here
+        root.title("HARD MODE")
+        root.geometry("400x600")
+        root.maxsize(400, 600)
+        root.config(bg = "#F8EDEB")
 
+        self.frame = Frame(root, width = 300, height = 500, bg = "#4f7aa8")
+        self.frame.place(x = 20, y = 20, relx = 0.08, rely = 0.08)
 
-        left_frame  =  Frame(root,  width=250,  height=500,  bg='grey')
-        left_frame.place(x=10,  y=10,  relx=0.01,  rely=0.01)
+        Label(self.frame, text = "HARD MODE", font=("Consolas", 13), bg = "#4f7aa8").place(relx = 0.5, rely = 0.05, anchor = N)
 
-        Label(left_frame, text = "Hard MODE", font=("Consolas", 13)).place(relx = 0, anchor = N)
+        rel_x = .1
+        rel_y = .14
 
-        self.letter1 = Text(left_frame, width = 10, height = 5, wrap = WORD, font = ("Consolas"), bg = "#F8EDEB")
-        self.letter1.place(relx = 5, rely = 1, anchor = N)
-        self.letter2 = Text(left_frame, width = 10, height = 5, wrap = WORD, font = ("Consolas"), bg = "#F8EDEB")
-        self.letter2.place(relx = 5, rely = 1, anchor = N)
-        self.letter3 = Text(left_frame, width = 10, height = 5, wrap = WORD, font = ("Consolas"), bg = "#F8EDEB")
-        self.letter3.place(relx = 5, rely = 2, anchor = N)
-        self.letter4 = Text(left_frame, width = 10, height = 5, wrap = WORD, font = ("Consolas"), bg = "#F8EDEB")
-        self.letter4.place(relx = 5, rely = 3, anchor = N)
+        #self.testletter = Entry(self.frame, width = 4, height = 2.4, font = ("Consolas"), bg = "#F8EDEB")
+        #self.testletter.place(relx = 1, rely = .84, anchor = N)
 
-        self.letter5 = Text(left_frame, width = 10, height = 5, wrap = WORD, font = ("Consolas"), bg = "#F8EDEB")
-        self.letter5.place(relx = 50, rely = 0, anchor = N)
-        self.letter6 = Text(left_frame, width = 10, height = 5, wrap = WORD, font = ("Consolas"), bg = "#F8EDEB")
-        self.letter6.place(relx = 50, rely = 1, anchor = N)
-        self.letter7 = Text(left_frame, width = 10, height = 5, wrap = WORD, font = ("Consolas"), bg = "#F8EDEB")
-        self.letter7.place(relx = 11, rely = 2, anchor = N)
-        self.letter8 = Text(left_frame, width = 10, height = 5, wrap = WORD, font = ("Consolas"), bg = "#F8EDEB")
-        self.letter8.place(relx = 11, rely = 3, anchor = N)
-
-        self.letter9 = Text(left_frame, width = 10, height = 5, wrap = WORD, font = ("Consolas"), bg = "#F8EDEB")
-        self.letter9.place(relx = 17, rely = 0, anchor = N)
-        self.letter10 = Text(left_frame, width = 10, height = 5, wrap = WORD, font = ("Consolas"), bg = "#F8EDEB")
-        self.letter10.place(relx = 17, rely = 1, anchor = N)
-        self.letter11 = Text(left_frame, width = 10, height = 5, wrap = WORD, font = ("Consolas"), bg = "#F8EDEB")
-        self.letter11.place(relx = 17, rely = 2, anchor = N)
-        self.letter12 = Text(left_frame, width = 10, height = 5, wrap = WORD, font = ("Consolas"), bg = "#F8EDEB")
-        self.letter12.place(relx = 17, rely = 3, anchor = N)
-
-        self.letter13 = Text(left_frame, width = 10, height = 5, wrap = WORD, font = ("Consolas"), bg = "#F8EDEB")
-        self.letter13.place(relx = 23, rely = 0, anchor = N)
-        self.letter14 = Text(left_frame, width = 10, height = 5, wrap = WORD, font = ("Consolas"), bg = "#F8EDEB")
-        self.letter14.place(relx = 23, rely = 1, anchor = N)
-        self.letter15 = Text(left_frame, width = 10, height = 5, wrap = WORD, font = ("Consolas"), bg = "#F8EDEB")
-        self.letter15.place(relx = 23, rely = 2, anchor = N)
-        self.letter16 = Text(left_frame, width = 10, height = 5, wrap = WORD, font = ("Consolas"), bg = "#F8EDEB")
-        self.letter16.place(relx = 23, rely = 3, anchor = N)
-
-        self.letter17 = Text(left_frame, width = 10, height = 5, wrap = WORD, font = ("Consolas"), bg = "#F8EDEB")
-        self.letter17.place(relx = 29, rely = 0, anchor = N)
-        self.letter18 = Text(left_frame, width = 10, height = 5, wrap = WORD, font = ("Consolas"), bg = "#F8EDEB")
-        self.letter18.place(relx = 29, rely = 1, anchor = N)
-        self.letter19 = Text(left_frame, width = 10, height = 5, wrap = WORD, font = ("Consolas"), bg = "#F8EDEB")
-        self.letter19.place(relx = 29, rely = 2, anchor = N)
-        self.letter20 = Text(left_frame, width = 10, height = 5, wrap = WORD, font = ("Consolas"), bg = "#F8EDEB")
-        self.letter20.place(relx = 29, rely = 3, anchor = N)
-
-        self.letter21 = Text(left_frame, width = 10, height = 5, wrap = WORD, font = ("Consolas"), bg = "#F8EDEB")
-        self.letter21.place(relx = 35, rely = 0, anchor = N)
-        self.letter22 = Text(left_frame, width = 10, height = 5, wrap = WORD, font = ("Consolas"), bg = "#F8EDEB")
-        self.letter22.place(relx = 35, rely = 1, anchor = N)
-        self.letter23 = Text(left_frame, width = 10, height = 5, wrap = WORD, font = ("Consolas"), bg = "#F8EDEB")
-        self.letter23.place(relx = 35, rely = 2, anchor = N)
-        self.letter24 = Text(left_frame, width = 10, height = 5, wrap = WORD, font = ("Consolas"), bg = "#F8EDEB")
-        self.letter24.place(relx = 35, rely = 3, anchor = N)
-        
+        self.test_ent = Entry(self.frame)
+        self.test_ent.place(relx = 1, rely = .84, anchor = N)
+        for i in range(0, 6):
+            self.letter1 = Text(self.frame, width = 4, height = 2.4, font = ("Consolas"), bg = "#c3d1e0")
+            self.letter1.place(relx = rel_x, rely = rel_y, anchor = N)
+            self.letter2 = Text(self.frame, width = 4, height = 2.4, font = ("Consolas"), bg = "#c3d1e0")
+            self.letter2.place(relx = rel_x + 0.15, rely = rel_y, anchor = N)
+            self.letter3 = Text(self.frame, width = 4, height = 2.4, font = ("Consolas"), bg = "#c3d1e0")
+            self.letter3.place(relx = rel_x +.3, rely = rel_y, anchor = N)
+            self.letter4 = Text(self.frame, width = 4, height = 2.4, font = ("Consolas"), bg = "#c3d1e0")
+            self.letter4.place(relx = rel_x+.45, rely = rel_y, anchor = N)
+            self.letter5 = Text(self.frame, width = 4, height = 2.4, font = ("Consolas"), bg = "#c3d1e0")
+            self.letter5.place(relx = rel_x+.6, rely = rel_y, anchor = N)
+            self.letter6 = Text(self.frame, width = 4, height = 2.4, font = ("Consolas"), bg = "#c3d1e0")
+            self.letter6.place(relx = rel_x+.75, rely = rel_y, anchor = N)
+            
+            rel_y += .14
 
     def retrieve_input(self):
-        input = self.letter1w1.get("1.0",END)
-        print(input)
+        input = self.letter1.get("1.0",END)
+        return input
+    
     
 
 
