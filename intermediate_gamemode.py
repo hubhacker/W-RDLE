@@ -35,40 +35,39 @@ class Intermediate(Frame):
 
         rel_x = 0.1
         rel_y = 0.14
+
+
         for i in range(1,6):
             self.letter1 = Text(self.frame, width = 4, height = 2.4, font = ("Consolas"), bg = "#CDB4DB") # I'LL CHANGE BG LATER
             self.letter1.place(relx = rel_x, rely = rel_y, anchor = N)
 
             self.letter2 = Text(self.frame, width = 4, height = 2.4, font = ("Consolas"), bg = "#CDB4DB") # I'LL CHANGE BG LATER
             self.letter2.place(relx = rel_x * 3, rely = rel_y, anchor = N)
-            self.letter3 = Text(self.frame, width = 4, height = 2.4, font = ("Consolas"), bg = "CDB4DB") # I'LL CHANGE BG LATER
+            self.letter3 = Text(self.frame, width = 4, height = 2.4, font = ("Consolas"), bg = "#CDB4DB") # I'LL CHANGE BG LATER
             self.letter3.place(relx = rel_x * 5, rely = rel_y, anchor = N)
-            self.letter4 = Text(self.frame, width = 4, height = 2.4, font = ("Consolas"), bg = "CDB4DB") # I'LL CHANGE BG LATER
+            self.letter4 = Text(self.frame, width = 4, height = 2.4, font = ("Consolas"), bg = "#CDB4DB") # I'LL CHANGE BG LATER
             self.letter4.place(relx = rel_x *7, rely = rel_y, anchor = N)
-            self.letter5 = Text(self.frame, width = 4, height = 2.4, font = ("Consolas"), bg = "CDB4DB") # I'LL CHANGE BG LATER
+            self.letter5 = Text(self.frame, width = 4, height = 2.4, font = ("Consolas"), bg = "#CDB4DB") # I'LL CHANGE BG LATER
             self.letter5.place(relx = rel_x * 9, rely = rel_y, anchor = N)
 
             rel_y += 0.14
         
-    def guess_ent(self):
-        pass
-        
-    def check_guess(self): # callback function
-        
-        guess = self.guess_ent.get()
-        
-        while guess != self.intword:
-            pass
-        
-        word_single = []
-        for i in guess:
-            word_single.append(i)
-        letter = Label[i] = i
-        
-        self.delete(0.0, END)
-        self.letter1.insert(0.0, letter)
+ #def retrieve_word1(self, event):
+
+        #l1 = self.letter1.get(1.0, "end-1c")
+        #l2 = self.letter2.get(1.0, "end-1c")
+        #l3 = self.letter3.get(1.0, "end-1c")
+        #l4 = self.letter4.get(1.0, "end-1c")
+        #l5 = self.letter5.get(1.0, "end-1c")
+        #l6 = self.letter6.get(1.0, "end-1c")
+
+        #word = l1 + l2 + l3 + l4 + l5 + l6
+        #return word
 
 root = Tk() 
+
+#root.bind('<Return, retrieve_word1')
+
 root.title("Intermediate Mode")
 app = Intermediate(root)
 root.mainloop()
