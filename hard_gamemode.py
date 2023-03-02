@@ -53,11 +53,23 @@ class Hard(Frame):
             self.letter6.place(relx = rel_x+.75, rely = rel_y, anchor = N)
             
             rel_y += .14
+    def retrieve_word1(self, event):
 
-    def retrieve_input(self):
-        input = self.letter1.get("1.0",END)
-        return input
-    
+        l1 = self.letter1.get(1.0, "end-1c")
+        l2 = self.letter2.get(1.0, "end-1c")
+        l3 = self.letter3.get(1.0, "end-1c")
+        l4 = self.letter4.get(1.0, "end-1c")
+        l5 = self.letter5.get(1.0, "end-1c")
+        l6 = self.letter6.get(1.0, "end-1c")
+
+        word = l1 + l2 + l3 + l4 + l5 + l6
+        return word
+
+
+
+        
+
+        
     
 
 
@@ -79,6 +91,9 @@ class Hard(Frame):
         self.letter1.insert(0.0, letter)"""
     
 root = Tk()
+
+root.bind('<Return>, retrieve_word1')
+
 root.title("Hard")
 app = Hard(root)
 root.mainloop()
