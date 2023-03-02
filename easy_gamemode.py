@@ -86,6 +86,9 @@ class Easy(Frame):
         self.letter24 = Text(self.frame, width = 4, height = 2.4, font = ("Consolas"), bg = "#F8EDEB")
         self.letter24.place(relx = 0.8, rely = 0.80, anchor = N)
 
+    
+
+
     def guess(self):
         
         pass
