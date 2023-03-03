@@ -22,7 +22,6 @@ class Easy(Frame):
     
     def create_widgets(self):
         
-        root.title("EASY MODE")
         root.geometry("400x600")
         root.maxsize(400, 600)
         root.config(bg = "#F8EDEB")
@@ -85,8 +84,6 @@ class Easy(Frame):
         self.letter23.place(relx = 0.6, rely = 0.80, anchor = N)
         self.letter24 = Text(self.frame, width = 4, height = 2.4, font = ("Consolas"), bg = "#F8EDEB")
         self.letter24.place(relx = 0.8, rely = 0.80, anchor = N)
-
-    
 
 
     def guess(self):
