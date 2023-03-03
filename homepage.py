@@ -25,7 +25,7 @@ class Application(Frame):
         Button(root, text = "Easy Mode!", command = self.setup_easy, font ="Helvetica", fg = "black", bg = "#F9DCC4").place(x=140,y=60)
 
         # #Label(self, text = "Intermediate Mode!", font = "Century 13", fg = "DarkOrchid2").grid(row = 5, column = 2)
-        Button(root, text = "Intermediate Mode!", command = self.setup_intermediate, font ="Helvetica", fg = "white", bg= "blue").place(x=110, y=110)
+        Button(root, text = "Intermediate Mode!", command = self.setup_intermediate, font ="Helvetica", fg = "white", bg= "#CDB4DB").place(x=115, y=110)
 
         # #Label(self, text= "Hard Mode!", font = "Century 13", fg = "PeachPuff4").grid(row = 5, column = 3)
         Button(root, text = "Hard Mode!", command = self.setup_hard, font ="Helvetica", fg = "white", bg = "#4f7aa8").place(x=140,y=160)
