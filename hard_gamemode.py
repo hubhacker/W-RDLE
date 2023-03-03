@@ -4,12 +4,14 @@ import random
 class Hard(Frame):
     
     def __init__(self, master):
+
         super(Hard, self).__init__(master)
         self.grid()
         self.create_widgets()
         self.file = "midyear_6letterwords.txt"
 
     def choose_word(self): 
+
         sixletter = open("midyear_6letterwords.txt")
 
         self.sixletterlist = []
@@ -20,7 +22,7 @@ class Hard(Frame):
         self.hardword = self.sixletterlist([random.randint(0, 1000)])
 
     def create_widgets(self):
-        root.title("HARD MODE")
+        
         root.geometry("400x600")
         root.maxsize(400, 600)
         root.config(bg = "#F8EDEB")
