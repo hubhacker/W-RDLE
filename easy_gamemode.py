@@ -21,6 +21,7 @@ class Easy(Frame):
         self.easyword = self.fourletterList([random.randint(0, 1000)])
     
     def create_widgets(self):
+
         
         root.geometry("400x600")
         root.maxsize(400, 600)
@@ -85,6 +86,13 @@ class Easy(Frame):
         self.letter24 = Text(self.frame, width = 4, height = 2.4, font = ("Consolas"), bg = "#F8EDEB")
         self.letter24.place(relx = 0.8, rely = 0.80, anchor = N)
 
+        self.image = Image.open("peachimage.png")
+        resize_image = self.image.resize((20, 20))
+        self.image=PhotoImage(file='peachimage.png')
+        img = self.image.PhotoImage(resize_image)
+        peach_lbl=Label(image=img)
+        peach_lbl.image = img
+        peach_lbl.place(x=100,y=100)
 
     def guess(self):
         
