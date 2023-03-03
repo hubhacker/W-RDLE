@@ -25,7 +25,7 @@ class Intermediate(Frame):
     def create_widgets(self):
 
         root.geometry("400x600")
-        #root.maxsize(400, 600)
+        root.maxsize(400, 600)
         root.config(bg = "#F8EDEB") # I'LL CHANGE BG LATER
 
         self.frame = Frame(root, width = 400, height = 600, bg = "#F9DCC4") # I'LL CHANGE BG LATER
