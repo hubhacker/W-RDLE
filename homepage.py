@@ -33,18 +33,6 @@ class Application(Frame):
         canvas.create_line(2, 25, 500, 25, width=2)
         canvas.create_line(2, 220, 500, 220, width=2)
         canvas.pack()
-
-    def setup_easy(self):
-        pass
-
-    def setup_intermediate(self):
-        pass
-
-    def setup_hard(self):
-        pass
-
-    def setup_shop(self):
-        pass
         
 root = Tk() 
 root.title("Homepage")

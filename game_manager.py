@@ -14,12 +14,18 @@ class GameManager(object):
 
     def setup_homescreen(self):
         self.root.title("Select Game Mode:")
-        self.screen = Application(self, master= self.root, callback_hompage = self.onclose_homepage)
-        self.screen = GameManager(self, master= self.root, callback_homepage = self.onclose_homepage)
+        self.current_screen = Application(self, master= self.root, callback_hompage = self.onclose_homepage)
+        self.current_screen = GameManager(self, master= self.root, callback_homepage = self.onclose_homepage)
 
-    def onclose_homepage(self):
-        self.screen.destroy()
-        self.screen = Easy(self, master= self.root, callback_easy= self.onclose_easy)
+    def setup_easy(self): # previously onclose
+        self.current_screen.destroy()
+        self.root.title("Easy Mode!")
+        self.current_screen = Easy(self, master = self.root, callback_easy = self.onclose_easy)
+
+    def setup_intermediate(self):
+        self.current_screen.destroy()
+        self.root.title("Intermediate Mode!")
+        self.current_screen = Intermediate(self, master = self.root, callback_intermediate = self.)
         
 
 #def main():
