@@ -33,7 +33,9 @@ class GameManager(object):
         self.current_screen = Intermediate(self, master = self.root, callback_hard = self.onclose_hard)
 
     def onclose_shop(self):
-        pass
+        self.current_screen.destroy()
+        self.root.title("Shop")
+        # self.current_screen = 
         
 
 #def main():
