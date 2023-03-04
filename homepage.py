@@ -34,18 +34,6 @@ class Application(Frame):
         canvas.create_line(2, 22, 500, 22, dash=(7), width=2)
         canvas.create_line(2, 235, 500, 235, dash=(7), width=2)
         canvas.pack()
-
-    def setup_easy(self):
-        pass
-
-    def setup_intermediate(self):
-        pass
-
-    def setup_hard(self):
-        pass
-
-    def setup_shop(self):
-        pass
         
 root = Tk() 
 root.title("Homepage")

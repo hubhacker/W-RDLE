@@ -21,8 +21,8 @@ class Easy(Frame):
         self.easyword = self.fourletterList([random.randint(0, 1000)])
     
     def create_widgets(self):
+
         
-        root.title("EASY MODE")
         root.geometry("400x600")
         root.maxsize(400, 600)
         root.config(bg = "#F8EDEB")
@@ -86,27 +86,25 @@ class Easy(Frame):
         self.letter24 = Text(self.frame, width = 4, height = 2.4, font = ("Consolas"), bg = "#F8EDEB")
         self.letter24.place(relx = 0.8, rely = 0.80, anchor = N)
 
-    
+        self.image = Image.open("peachimage.png")
+        resize_image = self.image.resize((20, 20))
+        self.image=PhotoImage(file='peachimage.png')
+        img = self.image.PhotoImage(resize_image)
+        peach_lbl=Label(image=img)
+        peach_lbl.image = img
+        peach_lbl.place(x=100,y=100)
 
+    #def retrieve_word1(self, event):
 
-    def guess(self):
-        
-        pass
+        #l1 = self.letter1.get(1.0, "end-1c")
+        #l2 = self.letter2.get(1.0, "end-1c")
+        #l3 = self.letter3.get(1.0, "end-1c")
+        #l4 = self.letter4.get(1.0, "end-1c")
+        #l5 = self.letter5.get(1.0, "end-1c")
+        #l6 = self.letter6.get(1.0, "end-1c")
 
-    def check_guess(self): # callback function
-        
-        guess = self.guess_ent.get()
-        
-        while guess != self.easyword:
-            pass
-        
-        word_single = []
-        for i in guess:
-            word_single.append(i)
-        letter = Label[i] = i
-        
-        self.delete(0.0, END)
-        self.letter1.insert(0.0, letter)
+        #word = l1 + l2 + l3 + l4 + l5 + l6
+        #return word
 
 root = Tk()
 root.title("EASY MODE")

@@ -22,39 +22,40 @@ class Hard(Frame):
         self.hardword = self.sixletterlist([random.randint(0, 1000)])
 
     def create_widgets(self):
-        
+        canvas = Canvas()
         root.geometry("400x600")
         root.maxsize(400, 600)
-        root.config(bg = "#F8EDEB")
+        root.config(bg = "#FFE8D6")
 
-        self.frame = Frame(root, width = 300, height = 500, bg = "#4f7aa8")
+        self.frame = Frame(root, width = 300, height = 500, bg = "#CB997E")
         self.frame.place(x = 20, y = 20, relx = 0.08, rely = 0.08)
 
-        Label(self.frame, text = "HARD MODE", font=("Consolas", 13), bg = "#4f7aa8").place(relx = 0.5, rely = 0.05, anchor = N)
+        Label(self.frame, text = "HARD MODE", font=("Consolas", 13), bg = "#CB997E").place(relx = 0.5, rely = 0.05, anchor = N)
 
         rel_x = .1
         rel_y = .14
 
-        #self.testletter = Entry(self.frame, width = 4, height = 2.4, font = ("Consolas"), bg = "#F8EDEB")
-        #self.testletter.place(relx = 1, rely = .84, anchor = N)
+        test = Button(self, text='test button')
+        test.place(self.frame, relx = 1.75, rely = .82, anchor = N)
 
-        self.test_ent = Entry(self.frame)
-        self.test_ent.place(relx = 1, rely = .84, anchor = N)
         for i in range(0, 6):
-            self.letter1 = Text(self.frame, width = 4, height = 2.4, font = ("Consolas"), bg = "#c3d1e0")
+            self.letter1 = Text(self.frame, width = 4, height = 2.4, font = ("Consolas"), bg = "#DDBEA9")
             self.letter1.place(relx = rel_x, rely = rel_y, anchor = N)
-            self.letter2 = Text(self.frame, width = 4, height = 2.4, font = ("Consolas"), bg = "#c3d1e0")
+            self.letter2 = Text(self.frame, width = 4, height = 2.4, font = ("Consolas"), bg = "#DDBEA9")
             self.letter2.place(relx = rel_x + 0.15, rely = rel_y, anchor = N)
-            self.letter3 = Text(self.frame, width = 4, height = 2.4, font = ("Consolas"), bg = "#c3d1e0")
+            self.letter3 = Text(self.frame, width = 4, height = 2.4, font = ("Consolas"), bg = "#DDBEA9")
             self.letter3.place(relx = rel_x +.3, rely = rel_y, anchor = N)
-            self.letter4 = Text(self.frame, width = 4, height = 2.4, font = ("Consolas"), bg = "#c3d1e0")
+            self.letter4 = Text(self.frame, width = 4, height = 2.4, font = ("Consolas"), bg = "#DDBEA9")
             self.letter4.place(relx = rel_x+.45, rely = rel_y, anchor = N)
-            self.letter5 = Text(self.frame, width = 4, height = 2.4, font = ("Consolas"), bg = "#c3d1e0")
+            self.letter5 = Text(self.frame, width = 4, height = 2.4, font = ("Consolas"), bg = "#DDBEA9")
             self.letter5.place(relx = rel_x+.6, rely = rel_y, anchor = N)
-            self.letter6 = Text(self.frame, width = 4, height = 2.4, font = ("Consolas"), bg = "#c3d1e0")
+            self.letter6 = Text(self.frame, width = 4, height = 2.4, font = ("Consolas"), bg = "#DDBEA9")
             self.letter6.place(relx = rel_x+.75, rely = rel_y, anchor = N)
             
             rel_y += .14
+
+
+        canvas.create_line
     def retrieve_word1(self, event):
 
         l1 = self.letter1.get(1.0, "end-1c")
@@ -66,6 +67,8 @@ class Hard(Frame):
 
         word = l1 + l2 + l3 + l4 + l5 + l6
         return word
+    
+
 
 
 
