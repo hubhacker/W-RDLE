@@ -19,7 +19,7 @@ class Application(Frame):
         canvas = Canvas()
 
         
-        Label(root, text = "W ♾ RDLE", font=("Georgia", 30), fg = "black").place(x=90,y=10)
+        Label(root, text = "W ♾ RDLE", font=("Georgia", 30), fg = "black").place(x=90,y=1)
         
         #Label(self, text= "Easy Mode!", font = "Century 13" , fg = "HotPink3").grid(row = 5, column = 1)
         Button(root, text = " EASY ", command = self.setup_easy, font =("Georgia", 15), fg = "black", bg = "#F9DCC4").place(x=220,y=65)
