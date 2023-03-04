@@ -1,9 +1,10 @@
 from tkinter import *
+from game_manager import GameManager
 
-#from easy_gamemode import Application
-#from intermediate_gamemode import Application
-#from hard_gamemode import Application
-#from shop import Application
+from easy_gamemode import Easy
+from intermediate_gamemode import Intermediate
+from hard_gamemode import Hard
+from shop import Shop
 
 class Application(Frame):
     def __init__(self, master):

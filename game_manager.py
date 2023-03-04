@@ -4,7 +4,7 @@ from homepage import Application
 from easy_gamemode import Easy
 from intermediate_gamemode import Intermediate
 from hard_gamemode import Hard
-from shop import Application
+from shop import Shop
 
 class GameManager(object):
 
