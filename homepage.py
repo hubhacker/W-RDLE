@@ -20,9 +20,13 @@ class Application(Frame):
 
         
         Label(root, text = "W♾RDLE", font=("Consolas", 30), fg = "black").place(x=110,y=1)
-        Button(root, text = " EASY ", command = self.setup_easy, font =("Consolas", 15), fg = "black", bg = "#F9DCC4").place(x=220,y=65)
-        Button(root, text = "MEDIUM", command = self.setup_intermediate, font =("Consolas", 15), fg = "white", bg= "#CDB4DB").place(x=220, y=115)
-        Button(root, text = " HARD ", command = self.setup_hard, font =("Consolas", 15), fg = "white", bg = "#4f7aa8").place(x=220,y=165)
+        Button(root, text = " EASY ", command = self.setup_easy, font =("Consolas", 15), fg = "black", bg = "#F9DCC4", width=13, height=1).place(x=220,y=65)
+        Button(root, text = "MEDIUM", command = self.setup_intermediate, font =("Consolas", 15), fg = "white", bg= "#CDB4DB", width=13, height=1).place(x=220, y=115)
+        Button(root, text = " HARD ", command = self.setup_hard, font =("Consolas", 15), fg = "white", bg = "#4f7aa8", width=13, height=1).place(x=220,y=165)
+        
+        Label(root, text = "Gamemode", font=("Consolas", 20), fg = "black").place(x=50,y=70)
+        Label(root, text = "Choose a gamemode", font=("Consolas", 10), fg = "black").place(x=50,y=120)
+        Label(root, text = "to the right.", font=("Consolas", 10), fg = "black").place(x=60,y=140)
 
         canvas.create_line(2, 27, 500, 27, width=2)
         canvas.create_line(2, 230, 500, 230, width=2)
