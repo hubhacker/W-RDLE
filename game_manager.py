@@ -31,7 +31,7 @@ class GameManager(object):
     def onclose_hard(self):
         self.current_screen.destroy()
         self.root.title("Hard Mode!")
-        self.current_screen = Intermediate(self, master = self.root, callback_hard = self.onclose_hard)
+        self.current_screen = Hard(self, master = self.root, callback_hard = self.onclose_hard)
 
     def onclose_shop(self):
         self.current_screen.destroy()

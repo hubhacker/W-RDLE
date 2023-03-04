@@ -1,10 +1,10 @@
 from tkinter import *
 from game_manager import GameManager
 
-from easy_gamemode import Easy
-from intermediate_gamemode import Intermediate
-from hard_gamemode import Hard
-from shop import Shop
+#from easy_gamemode import Easy
+#from intermediate_gamemode import Intermediate
+#from hard_gamemode import Hard
+#from shop import Shop
 
 class Application(Frame):
     def __init__(self, master):
@@ -49,18 +49,6 @@ class Application(Frame):
         canvas.create_line(2, 22, 500, 22, dash=(7), width=2)
         canvas.create_line(2, 235, 500, 235, dash=(7), width=2)
         canvas.pack()
-
-    def setup_easy(self):
-        pass
-
-    def setup_intermediate(self):
-        pass
-
-    def setup_hard(self):
-        pass
-
-    def setup_shop(self):
-        pass
         
 root = Tk() 
 root.title("Homepage")
