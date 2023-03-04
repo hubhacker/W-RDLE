@@ -4,6 +4,7 @@ from homepage import Application
 from easy_gamemode import Easy
 from intermediate_gamemode import Intermediate
 from hard_gamemode import Hard
+from shop import Application
 
 class GameManager(object):
 
@@ -35,7 +36,7 @@ class GameManager(object):
     def onclose_shop(self):
         self.current_screen.destroy()
         self.root.title("Shop")
-        # self.current_screen = 
+        self.current_screen = Shop(self, master = self.root, callback_shop = self.onclose_shop)
         
 
 #def main():
