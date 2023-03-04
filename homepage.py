@@ -28,8 +28,23 @@ class Application(Frame):
         Label(root, text = "Choose a gamemode", font=("Consolas", 10), fg = "black").place(x=50,y=120)
         Label(root, text = "to the right.", font=("Consolas", 10), fg = "black").place(x=60,y=140)
 
+        Label(root, text = "Instructions", font=("Consolas", 20), fg = "black").place(x=30,y=250)
+        Label(root, text = "How to Play", font=("Consolas", 13), fg = "black").place(x=30,y=285)
+
+        Label(root, text = "Wordle is a puzzle game that allows the users to puzzle", font=("Consolas", 8), fg = "black").place(x=30,y=320)
+        Label(root, text = "out what the randomly chosen word is. The word has a certain", font=("Consolas", 8), fg = "black").place(x=22,y=340)
+        Label(root, text = "number of letters, depending on the gamemode chosen. The", font=("Consolas", 8), fg = "black").place(x=30,y=360)
+        Label(root, text = "EASY gamemode makes the user guess 4-letter words. The MEDIUM", font=("Consolas", 8), fg = "black").place(x=22,y=380)
+        Label(root, text = "gamemode makes the user guess 5-letter words, and the HARD", font=("Consolas", 8), fg = "black").place(x=28,y=400)
+        Label(root, text = "mode, 6-letter words. Once a difficulty is chosen, the user", font=("Consolas", 8), fg = "black").place(x=22,y=420)
+        Label(root, text = "could start guessing the word. The correctly inputted letters", font=("Consolas", 8), fg = "black").place(x=22,y=440)
+        Label(root, text = "turn green, the letters that are in the wrong place but", font=("Consolas", 8), fg = "black").place(x=30,y=460)
+        Label(root, text = "somewhere in the word turn yellow, and the completely wrong", font=("Consolas", 8), fg = "black").place(x=22,y=480)
+        Label(root, text = "letters turn gray. Try your best to guess the word, have fun!", font=("Consolas", 8), fg = "black").place(x=22,y=500)
+
         canvas.create_line(2, 27, 500, 27, width=2)
         canvas.create_line(2, 230, 500, 230, width=2)
+
         canvas.create_line(2, 22, 500, 22, dash=(7), width=2)
         canvas.create_line(2, 235, 500, 235, dash=(7), width=2)
         canvas.pack()
