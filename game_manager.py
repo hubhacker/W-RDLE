@@ -17,15 +17,20 @@ class GameManager(object):
         self.current_screen = Application(self, master= self.root, callback_hompage = self.onclose_homepage)
         self.current_screen = GameManager(self, master= self.root, callback_homepage = self.onclose_homepage)
 
-    def setup_easy(self): # previously onclose
+    def onclose_easy(self): 
         self.current_screen.destroy()
         self.root.title("Easy Mode!")
         self.current_screen = Easy(self, master = self.root, callback_easy = self.onclose_easy)
 
-    def setup_intermediate(self):
+    def onclose_intermediate(self):
         self.current_screen.destroy()
         self.root.title("Intermediate Mode!")
-        self.current_screen = Intermediate(self, master = self.root, callback_intermediate = self.)
+        self.current_screen = Intermediate(self, master = self.root, callback_intermediate = self.onclose_intermediate)
+
+    def onclose_hard(self):
+        self.current_screen.destroy()
+        self.root.title("Hard Mode!")
+        self.current_screen = Intermediate(self, master = self.root, callback_hard = self.onclose_hard)
         
 
 #def main():
