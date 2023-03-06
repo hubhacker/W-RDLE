@@ -1,6 +1,5 @@
 from tkinter import *
 import tkinter
-from homepage import Application
 from easy_gamemode import Easy
 from intermediate_gamemode import Intermediate
 from hard_gamemode import Hard

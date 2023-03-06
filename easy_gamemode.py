@@ -1,4 +1,5 @@
 from tkinter import *
+from PIL import Image, ImageTk
 import random
 
 class Easy(Frame):
@@ -88,8 +89,9 @@ class Easy(Frame):
 
         self.image = Image.open("peachimage.png")
         resize_image = self.image.resize((20, 20))
-        self.image=PhotoImage(file='peachimage.png')
-        img = self.image.PhotoImage(resize_image)
+#        self.image=PhotoImage(file='peachimage.png')
+#        img = self.image.PhotoImage(resize_image)
+        img = ImageTk.PhotoImage(resize_image)
         peach_lbl=Label(image=img)
         peach_lbl.image = img
         peach_lbl.place(x=100,y=100)
