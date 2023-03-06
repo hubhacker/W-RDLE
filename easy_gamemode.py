@@ -52,6 +52,7 @@ class Easy(Frame):
         self.letter4 = Text(self.frame, width = 4, height = 2.4, font = ("Consolas"), bg = "#F8EDEB")
         self.letter4.place(relx = 0.8, rely = 0.14, anchor = N)
 
+
         self.letter5 = Text(self.frame, width = 4, height = 2.4, font = ("Consolas"), bg = "#F8EDEB")
         self.letter5.place(relx = 0.2, rely = 0.28, anchor = N)
         self.letter6 = Text(self.frame, width = 4, height = 2.4, font = ("Consolas"), bg = "#F8EDEB")
@@ -153,8 +154,39 @@ class Easy(Frame):
 
     def check_guess(self):
         
-        if self.one == self.easyword_split[0]:
+        ls1 = []
+
+        ls1.append(self.letter1.get)
+        ls1.append(self.letter2.get)
+        ls1.append(self.letter3.get)
+        ls1.append(self.letter4.get)
+
+        ls1 = []
+        easywordls = []
+
+        for c in self.easyword:
+            easywordls.append(c)
+
+        if ls1[0] == easywordls[0]:
             self.letter1 = Text(self.frame, width = 4, height = 2.4, font = ("Consolas"), bg = "#3cb542")
+        elif ls1[0] in easywordls:
+            self.letter1 = Text(self.frame, width = 4, height = 2.4, font = ("Consolas"), bg = "#fcffa7")
+
+        if ls1[1] == easywordls[1]:
+            self.letter2 = Text(self.frame, width = 4, height = 2.4, font = ("Consolas"), bg = "#3cb542")
+        elif ls1[1] in easywordls:
+            self.letter2 = Text(self.frame, width = 4, height = 2.4, font = ("Consolas"), bg = "#fcffa7")    
+
+        if ls1[2] == easywordls[2]:
+            self.letter3 = Text(self.frame, width = 4, height = 2.4, font = ("Consolas"), bg = "#3cb542")
+        elif ls1[2] in easywordls:
+            self.letter3 = Text(self.frame, width = 4, height = 2.4, font = ("Consolas"), bg = "#fcffa7") 
+
+        if ls1[3] == easywordls[3]:
+            self.letter4 = Text(self.frame, width = 4, height = 2.4, font = ("Consolas"), bg = "#3cb542")
+        elif ls1[1] in easywordls:
+            self.letter4 = Text(self.frame, width = 4, height = 2.4, font = ("Consolas"), bg = "#fcffa7") 
+
 
     # def check_guess(self): # callback function
         

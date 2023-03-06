@@ -54,17 +54,17 @@ class Application(Frame):
 
     def setup_easy(self):
         root = Tk()
-        root.title("EASY MODE (Title)")
+        root.title("EASY MODE")
         app = Easy(root)
 
     def setup_intermediate(self):
         root = Tk()
-        root.title("INTERMEDIATE MODE (Title)")
+        root.title("INTERMEDIATE MODE")
         app = Intermediate(root)
 
     def setup_hard(self):
         root = Tk()
-        root.title("HARD MODE (Title)")
+        root.title("HARD MODE")
         app = Hard(root)
 
     def setup_shop(self):
