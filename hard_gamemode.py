@@ -1,12 +1,11 @@
 from tkinter import *
 import tkinter
-from PIL import Image, ImageTk
+#from PIL import Image, ImageTk
 import random
 
 class Hard(Frame):
     
     def __init__(self, master):
-
         super(Hard, self).__init__(master)
         self.file = ("midyear_6letterwords.txt")
         self.create_widgets_h(master)
@@ -142,8 +141,44 @@ class Hard(Frame):
         self.letter5r = self.letter5.get(1.0, "end-1c")
         self.letter6r = self.letter6.get(1.0, "end-1c")
 
+        self.letter7r = self.letter1.get(1.0, "end-1c")
+        self.letter8r = self.letter2.get(1.0, "end-1c")
+        self.letter9r = self.letter3.get(1.0, "end-1c")
+        self.letter10r = self.letter4.get(1.0, "end-1c")
+        self.letter11r = self.letter5.get(1.0, "end-1c")
+        self.letter12r = self.letter6.get(1.0, "end-1c")
+
+        self.letter13r = self.letter1.get(1.0, "end-1c")
+        self.letter14r = self.letter2.get(1.0, "end-1c")
+        self.letter15r = self.letter3.get(1.0, "end-1c")
+        self.letter16r = self.letter4.get(1.0, "end-1c")
+        self.letter17r = self.letter5.get(1.0, "end-1c")
+        self.letter18r = self.letter6.get(1.0, "end-1c")
+
+        self.letter19r = self.letter1.get(1.0, "end-1c")
+        self.letter20r = self.letter2.get(1.0, "end-1c")
+        self.letter21r = self.letter3.get(1.0, "end-1c")
+        self.letter22r = self.letter4.get(1.0, "end-1c")
+        self.letter23r = self.letter5.get(1.0, "end-1c")
+        self.letter24r = self.letter6.get(1.0, "end-1c")
+
+        self.letter25r = self.letter1.get(1.0, "end-1c")
+        self.letter26r = self.letter2.get(1.0, "end-1c")
+        self.letter27r = self.letter3.get(1.0, "end-1c")
+        self.letter28r = self.letter4.get(1.0, "end-1c")
+        self.letter29r = self.letter5.get(1.0, "end-1c")
+        self.letter30r = self.letter6.get(1.0, "end-1c")
+
+        self.letter31r = self.letter1.get(1.0, "end-1c")
+        self.letter32r = self.letter2.get(1.0, "end-1c")
+        self.letter33r = self.letter3.get(1.0, "end-1c")
+        self.letter34r = self.letter4.get(1.0, "end-1c")
+        self.letter35r = self.letter5.get(1.0, "end-1c")
+        self.letter36r = self.letter6.get(1.0, "end-1c")
+
         word = self.letter1r + self.letter2r + self.letter3r + self.letter4r + self.letter5r + self.letter6r
         print(word)
+
 
     def check_guess(self):
         if self.letter1r == self.hardword_split[0]:
