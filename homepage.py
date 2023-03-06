@@ -18,7 +18,7 @@ class Application(Frame):
         #self.callback_on_easy = callback_on_easy
         
     def create_widgets(self):
-        canvas = Canvas()
+        canvas = Canvas(self.master)
 
         
         Label(root, text = "W♾RDLE", font=("Consolas", 30), fg = "black").place(x=110,y=1)
