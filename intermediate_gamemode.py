@@ -24,30 +24,30 @@ class Intermediate(Frame):
 
     def create_widgets_i(self,root):
 #        canvas = Canvas()
-        root.geometry("400x600")
-        root.maxsize(400, 600)
-        root.config(bg = "#dba4dd") # I'LL CHANGE BG LATER
+        root.geometry("430x600")
+        root.maxsize(430, 600)
+        root.config(bg = "#f0e6ef")
 
-        self.frame = Frame(root, width = 400, height = 600, bg = "#F9DCC4") # I'LL CHANGE BG LATER
+        self.frame = Frame(root, width = 400, height = 600, bg = "#ead5f2") # I'LL CHANGE BG LATER
         self.frame.place(x = 0, y = 0)
 
         Label(self.frame, text = "INTERMEDIATE MODE", font=("Consolas", 15), bg = "pink").place(relx = 0.5, rely = 0.05, anchor = N) # vivian i will change the color later, i can't rn bc i have no wifi
 
-        rel_x = 0.1
-        rel_y = 0.14
+        rel_x = 0.17
+        rel_y = 0.2
 
         for i in range(1,6):
-            self.letter1 = Text(self.frame, width = 4, height = 2.4, font = ("Consolas"), bg = "#CDB4DB") # I'LL CHANGE BG LATER
+            self.letter1 = Text(self.frame, width = 4, height = 2.4, font = ("Consolas"), bg = "#f0e6ef")
             self.letter1.place(relx = rel_x, rely = rel_y, anchor = N)
 
-            self.letter2 = Text(self.frame, width = 4, height = 2.4, font = ("Consolas"), bg = "#CDB4DB") # I'LL CHANGE BG LATER
-            self.letter2.place(relx = rel_x * 3, rely = rel_y, anchor = N)
-            self.letter3 = Text(self.frame, width = 4, height = 2.4, font = ("Consolas"), bg = "#CDB4DB") # I'LL CHANGE BG LATER
-            self.letter3.place(relx = rel_x * 5, rely = rel_y, anchor = N)
-            self.letter4 = Text(self.frame, width = 4, height = 2.4, font = ("Consolas"), bg = "#CDB4DB") # I'LL CHANGE BG LATER
-            self.letter4.place(relx = rel_x *7, rely = rel_y, anchor = N)
-            self.letter5 = Text(self.frame, width = 4, height = 2.4, font = ("Consolas"), bg = "#CDB4DB") # I'LL CHANGE BG LATER
-            self.letter5.place(relx = rel_x * 9, rely = rel_y, anchor = N)
+            self.letter2 = Text(self.frame, width = 4, height = 2.4, font = ("Consolas"), bg = "#f0e6ef") # I'LL CHANGE BG LATER
+            self.letter2.place(relx = rel_x * 2, rely = rel_y, anchor = N)
+            self.letter3 = Text(self.frame, width = 4, height = 2.4, font = ("Consolas"), bg = "#f0e6ef") # I'LL CHANGE BG LATER
+            self.letter3.place(relx = rel_x * 3, rely = rel_y, anchor = N)
+            self.letter4 = Text(self.frame, width = 4, height = 2.4, font = ("Consolas"), bg = "#f0e6ef") # I'LL CHANGE BG LATER
+            self.letter4.place(relx = rel_x *4, rely = rel_y, anchor = N)
+            self.letter5 = Text(self.frame, width = 4, height = 2.4, font = ("Consolas"), bg = "#f0e6ef") # I'LL CHANGE BG LATER
+            self.letter5.place(relx = rel_x * 5, rely = rel_y, anchor = N)
 
             rel_y += 0.14
 
@@ -56,8 +56,8 @@ class Intermediate(Frame):
             img = ImageTk.PhotoImage(resize_image)
             peach_lbl=Label(image=img)
             peach_lbl.image = img
-            peach_lbl.place(x=75,y=31)
-
+            peach_lbl.place(x=100,y=103)
+            
             self.image = Image.open("peachimage.png")
             resize_image = self.image.resize((20, 20))
             img = ImageTk.PhotoImage(resize_image)
