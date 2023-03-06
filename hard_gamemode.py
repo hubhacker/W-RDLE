@@ -199,13 +199,13 @@ class Hard(Frame):
         self.delete(0.0, END)
         self.letter1.insert(0.0, letter)"""
     
-root = Tk()
+#root = Tk()
 
-root.bind('<Return>, retrieve_word1')
+#root.bind('<Return>, retrieve_word1')
 
-root.title("Hard")
-app = Hard(root)
-root.mainloop()
+#root.title("Hard")
+#app = Hard(root)
+#root.mainloop()
         
 
         
