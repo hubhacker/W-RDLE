@@ -31,7 +31,7 @@ class Intermediate(Frame):
         self.frame = Frame(root, width = 330, height = 420, bg = "#FFC8DD")
         self.frame.place(x = 20, y = 20, relx = 0.08, rely = 0.08)
 
-        Label(self.frame, text = "INTERMEDIATE MODE", font=("Consolas", 15), bg = "pink").place(relx = 0.5, rely = 0.05, anchor = N) # vivian i will change the color later, i can't rn bc i have no wifi
+        Label(self.frame, text = "INTERMEDIATE MODE", font=("Consolas", 15), bg = "FFC8DD").place(relx = 0.5, rely = 0.05, anchor = N) # vivian i will change the color later, i can't rn bc i have no wifi
 
         rel_x = 0.17
         rel_y = 0.2
