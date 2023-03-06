@@ -1,4 +1,5 @@
 from tkinter import *
+from PIL import Image, ImageTk
 import random
 
 class Intermediate(Frame):
@@ -6,7 +7,6 @@ class Intermediate(Frame):
     def __init__(self, master):
 
         super(Intermediate, self).__init__(master)
-        #self.place()
         self.create_widgets()
         self.file = ("midyear_5letterwords.txt")
 
@@ -21,7 +21,6 @@ class Intermediate(Frame):
 
         self.intword = self.fiveletterlist([random.randint(0, 1000)])
 
-    
     def create_widgets(self):
 
         root.geometry("400x600")
@@ -35,7 +34,6 @@ class Intermediate(Frame):
 
         rel_x = 0.1
         rel_y = 0.14
-
 
         for i in range(1,6):
             self.letter1 = Text(self.frame, width = 4, height = 2.4, font = ("Consolas"), bg = "#CDB4DB") # I'LL CHANGE BG LATER
@@ -51,7 +49,14 @@ class Intermediate(Frame):
             self.letter5.place(relx = rel_x * 9, rely = rel_y, anchor = N)
 
             rel_y += 0.14
-        
+
+            self.image = Image.open("peachimage.png")
+            resize_image = self.image.resize((20, 20))
+            img = ImageTk.PhotoImage(resize_image)
+            peach_lbl=Label(image=img)
+            peach_lbl.image = img
+            peach_lbl.place(x=100,y=100)
+       
  #def retrieve_word1(self, event):
 
         #l1 = self.letter1.get(1.0, "end-1c")
