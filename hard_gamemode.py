@@ -45,7 +45,7 @@ class Hard(Frame):
         self.frame = Frame(root, width = 350, height = 520, bg = "#A5A58D")
         self.frame.place(x = 20, y = 20, relx = 0.08, rely = 0.08)
 
-
+    
 
         Label(self.frame, text = "HARD MODE", font=("Consolas", 16), bg = "#A5A58D").place(relx = 0.5, rely = 0.05, anchor = N)
 
