@@ -23,7 +23,7 @@ class Intermediate(Frame):
         self.intword = self.fiveletterlist([random.randint(0, 1000)])
 
     def create_widgets_i(self,root):
-#        canvas = Canvas()
+        canvas = Canvas()
         root.geometry("430x600")
         root.maxsize(430, 600)
         root.config(bg = "#f0e6ef")
@@ -31,7 +31,7 @@ class Intermediate(Frame):
         self.frame = Frame(root, width = 400, height = 600, bg = "#ead5f2") # I'LL CHANGE BG LATER
         self.frame.place(x = 0, y = 0)
 
-        Label(self.frame, text = "INTERMEDIATE MODE", font=("Consolas", 15), bg = "FFC8DD").place(relx = 0.5, rely = 0.05, anchor = N) # vivian i will change the color later, i can't rn bc i have no wifi
+        Label(self.frame, text = "INTERMEDIATE MODE", font=("Consolas", 15), bg = "#FFC8DD").place(relx = 0.5, rely = 0.05, anchor = N) # vivian i will change the color later, i can't rn bc i have no wifi
 
         rel_x = 0.17
         rel_y = 0.2
