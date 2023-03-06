@@ -126,7 +126,7 @@ class Hard(Frame):
         self.letter34 = Text(self.frame, width = 4, height = 2.4, font = ("Consolas"), bg = "#FFE8D6")
         self.letter34.place(relx = rel_x+.45, rely = rel_y+.61, anchor = N)
         self.letter35 = Text(self.frame, width = 4, height = 2.4, font = ("Consolas"), bg = "#FFE8D6")
-        self.letter35.place(relx = rel_x+.6, rely = rel_y+.61, anchor = N)
+        self.letter35.place(relx = rel_x+.6, rely = rel_y+.61, anchor = N
         self.letter36 = Text(self.frame, width = 4, height = 2.4, font = ("Consolas"), bg = "#FFE8D6")
         self.letter36.place(relx = rel_x+.75, rely = rel_y+.61, anchor = N)
             
@@ -199,13 +199,13 @@ class Hard(Frame):
         self.delete(0.0, END)
         self.letter1.insert(0.0, letter)"""
     
-#root = Tk()
+root = Tk()
 
-#root.bind('<Return>, retrieve_word1')
+root.bind('<Return>, retrieve_word1')
 
-#root.title("Hard")
-#app = Hard(root)
-#root.mainloop()
+root.title("Hard")
+app = Hard(root)
+root.mainloop()
         
 
         
