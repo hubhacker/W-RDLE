@@ -31,7 +31,7 @@ class Intermediate(Frame):
         self.frame = Frame(root, width = 330, height = 420, bg = "#FFC8DD")
         self.frame.place(x = 20, y = 20, relx = 0.08, rely = 0.08)
 
-        Label(self.frame, text = "INTERMEDIATE MODE", font=("Consolas", 13), bg = "#FFC8DD").place(relx = 0.5, rely = 0.08, anchor = N)
+        Label(self.frame, text = "INTERMEDIATE MODE", font=("Consolas", 15), bg = "pink").place(relx = 0.5, rely = 0.05, anchor = N) # vivian i will change the color later, i can't rn bc i have no wifi
 
         rel_x = 0.17
         rel_y = 0.2
@@ -51,19 +51,19 @@ class Intermediate(Frame):
 
             rel_y += 0.14
 
-            self.image = Image.open("peachimage.png")
-            resize_image = self.image.resize((20, 20))
+            self.image = Image.open("sanrio.png")
+            resize_image = self.image.resize((60, 60))
             img = ImageTk.PhotoImage(resize_image)
             peach_lbl=Label(image=img)
             peach_lbl.image = img
             peach_lbl.place(x=100,y=103)
 
-            self.image2 = Image.open("peachimage.png")
-            resize_image = self.image2.resize((20, 20))
-            img2 = ImageTk.PhotoImage(resize_image)
-            peach_lbl=Label(image=img2)
-            peach_lbl.image = img2
-            peach_lbl.place(x=310,y=103)
+            self.image = Image.open("peachimage.png")
+            resize_image = self.image.resize((20, 20))
+            img = ImageTk.PhotoImage(resize_image)
+            peach_lbl=Label(image=img)
+            peach_lbl.image = img
+            peach_lbl.place(x=302,y=31)
        
  #def retrieve_word1(self, event):
 
