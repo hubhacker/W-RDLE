@@ -26,9 +26,9 @@ class Intermediate(Frame):
 #        canvas = Canvas()
         root.geometry("400x600")
         root.maxsize(400, 600)
-        root.config(bg = "dba4dd") # I'LL CHANGE BG LATER
+        root.config(bg = "#dba4dd") # I'LL CHANGE BG LATER
 
-        self.frame = Frame(root, width = 400, height = 600, bg = "#F9DCC4") # I'LL CHANGE BG LATER
+        self.frame = Frame(root, width = 400, height = 600, bg = "#ead5f2") # I'LL CHANGE BG LATER
         self.frame.place(x = 0, y = 0)
 
         Label(self.frame, text = "INTERMEDIATE MODE", font=("Consolas", 15), bg = "pink").place(relx = 0.5, rely = 0.05, anchor = N) # vivian i will change the color later, i can't rn bc i have no wifi
