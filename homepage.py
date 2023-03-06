@@ -7,7 +7,7 @@ from game_manager import GameManager
 #from shop import Shop
 
 class Application(Frame):
-    def __init__(self, master):
+    def init(self, master):
         super(Application, self).__init__(master)
         self.create_widgets()
         self.easy_screen = None

@@ -10,16 +10,26 @@ class Easy(Frame):
         self.create_widgets()
         self.file=("midyear_4letterwords.txt")
     
-    def choose_word(self,file):
+    def choose_word(self): 
 
-        fourletter = open(file)
+        fourletter = open("midyear_4letterwords.txt")
 
-        self.fourletterList = []
+        self.fourletterlist = []
 
         for word in fourletter:
-            self.fourletterList.append(word.strip())
+            word = word.strip()
+            self.fourletterlist.append(word)
 
-        self.easyword = self.fourletterList([random.randint(0, 1000)])
+        rng = random.randint(0, 1000)
+
+        self.easyword = self.fourletterlist[rng]
+        
+        self.easyword_split = []
+        for i in self.easyword:
+            self.easyword_split.append(i)
+
+        print(self.easyword)
+
     
     def create_widgets(self):
 
@@ -96,17 +106,46 @@ class Easy(Frame):
         peach_lbl.image = img
         peach_lbl.place(x=100,y=100)
 
-    #def retrieve_word1(self, event):
+    def checker(self, event=None):
+        enter = self.letter4.get('1.0', END)
+        lastletter_list = enter.split()
+        empty = True
+        
+        if empty == False:
+            pass
 
-        #l1 = self.letter1.get(1.0, "end-1c")
-        #l2 = self.letter2.get(1.0, "end-1c")
-        #l3 = self.letter3.get(1.0, "end-1c")
-        #l4 = self.letter4.get(1.0, "end-1c")
-        #l5 = self.letter5.get(1.0, "end-1c")
-        #l6 = self.letter6.get(1.0, "end-1c")
+    def retrieve_word1(self, event=None):
 
-        #word = l1 + l2 + l3 + l4 + l5 + l6
-        #return word
+        self.one = self.letter1.get(1.0, "end-1c")
+        self.two = self.letter2.get(1.0, "end-1c")
+        self.three = self.letter3.get(1.0, "end-1c")
+        self.four = self.letter4.get(1.0, "end-1c")
+
+        word = self.one + self.two + self + self.three + self.four
+        print(word)
+
+    def check_guess(self):
+        
+        if self.one == self.easyword_split[0]:
+            self.letter1 = Text(self.frame, width = 4, height = 2.4, font = ("Consolas"), bg = "#3cb542")
+
+    # def check_guess(self): # callback function
+        
+        """testing = self.letter1w1.get()
+        self.test.delete(0.0, END)
+        self.test.insert(0.0, testing+'omg')"""
+        
+        """while guess != self.hardword:
+            pass
+        
+        word_single = []
+        for i in guess:
+            word_single.append(i)
+        letter = Label[i] = i
+        
+        self.delete(0.0, END)
+        self.letter1.insert(0.0, letter)"""
+
 
 root = Tk()
 root.title("EASY MODE")
