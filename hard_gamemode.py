@@ -17,9 +17,18 @@ class Hard(Frame):
         self.sixletterlist = []
 
         for word in sixletter:
-            self.sixletterlist.append(word.strip())
+            word = word.strip()
+            self.sixletterlist.append(word)
 
-        self.hardword = self.sixletterlist([random.randint(0, 1000)])
+        rng = random.randint(0, 1000)
+
+        self.hardword = self.sixletterlist[rng]
+        
+        self.hardword_split = []
+        for i in self.hardword:
+            self.hardword_split.append(i)
+
+        print(self.hardword)
 
     def create_widgets(self):
         canvas = Canvas()
@@ -27,7 +36,8 @@ class Hard(Frame):
         root.maxsize(400, 600)
         root.config(bg = "#FFE8D6")
 
-        self.button_bg = Button(root, width = 400, height = 600, bg = '#32a852').place(x= 0, y = 0, relx = 0, rely= 0)
+        self.button_bg = Button(root, command = self.choose_word, width = 400, height = 600, bg = '#32a852').place(x= 0, y = 0, relx = 0, rely= 0)
+        self.button2 = Button(root, )
 
         self.frame = Frame(root, width = 300, height = 500, bg = "#CB997E")
         self.frame.place(x = 20, y = 20, relx = 0.08, rely = 0.08)
@@ -123,17 +133,38 @@ class Hard(Frame):
         self.testletter = Text(self.frame, width = 4, height = 2.4, font = ("Consolas"), bg = "#DDBEA9")
         self.testletter.place(relx = .80, rely = .90, anchor = N)
 
+
+        self.letter6.bind('<Return>, retrieve_word1')
+
+
+        
+    def checker(self, event=None):
+        enter = self.letter6.get('1.0', END)
+        lastletter_list = enter.split()
+        empty = True
+        
+        if empty == False:
+            pass
+
+
+
     def retrieve_word1(self, event=None):
 
-        l1 = self.letter1.get(1.0, "end-1c")
-        l2 = self.letter2.get(1.0, "end-1c")
-        l3 = self.letter3.get(1.0, "end-1c")
-        l4 = self.letter4.get(1.0, "end-1c")
-        l5 = self.letter5.get(1.0, "end-1c")
-        l6 = self.letter6.get(1.0, "end-1c")
+        self.one = self.letter1.get(1.0, "end-1c")
+        self.two = self.letter2.get(1.0, "end-1c")
+        self.three = self.letter3.get(1.0, "end-1c")
+        self.four = self.letter4.get(1.0, "end-1c")
+        self.five = self.letter5.get(1.0, "end-1c")
+        self.six = self.letter6.get(1.0, "end-1c")
 
-        word = l1 + l2 + l3 + l4 + l5 + l6
+        word = self.one + self.two + self + self.three + self.four + self.five + self.six
         print(word)
+
+    def check_guess(self):
+        
+        if self.one == self.hardword_split[0]:
+            self.letter1 = Text(self.frame, width = 4, height = 2.4, font = ("Consolas"), bg = "#3cb542")
+
 
 
     # def check_guess(self): # callback function
