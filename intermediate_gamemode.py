@@ -51,19 +51,19 @@ class Intermediate(Frame):
 
             rel_y += 0.14
 
-            self.image = Image.open("sanrio.png")
-            resize_image = self.image.resize((60, 60))
-            img = ImageTk.PhotoImage(resize_image)
-            peach_lbl=Label(image=img)
-            peach_lbl.image = img
-            peach_lbl.place(x=100,y=103)
+        self.image = Image.open("sanrio.png")
+        resize_image = self.image.resize((60, 60))
+        img = ImageTk.PhotoImage(resize_image)
+        peach_lbl=Label(image=img)
+        peach_lbl.image = img
+        peach_lbl.place(x=100,y=103)
 
-            self.image = Image.open("peachimage.png")
-            resize_image = self.image.resize((20, 20))
-            img = ImageTk.PhotoImage(resize_image)
-            peach_lbl=Label(image=img)
-            peach_lbl.image = img
-            peach_lbl.place(x=302,y=31)
+        self.image = Image.open("peachimage.png")
+        resize_image = self.image.resize((20, 20))
+        img = ImageTk.PhotoImage(resize_image)
+        peach_lbl=Label(image=img)
+        peach_lbl.image = img
+        peach_lbl.place(x=302,y=31)
        
  #def retrieve_word1(self, event):
 
