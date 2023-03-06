@@ -2,7 +2,7 @@ from tkinter import *
 import tkinter
 from PIL import Image, ImageTk
 import random
-
+#F9DCC4
 class Intermediate(Frame):
 
     def __init__(self, master):
@@ -28,8 +28,8 @@ class Intermediate(Frame):
         root.maxsize(430, 600)
         root.config(bg = "#f0e6ef")
 
-        self.frame = Frame(root, width = 330, height = 420, bg = "#FFC8DD")
-        self.frame.place(x = 20, y = 20, relx = 0.08, rely = 0.08)
+        self.frame = Frame(root, width = 400, height = 600, bg = "#ead5f2") # I'LL CHANGE BG LATER
+        self.frame.place(x = 0, y = 0)
 
         Label(self.frame, text = "INTERMEDIATE MODE", font=("Consolas", 15), bg = "FFC8DD").place(relx = 0.5, rely = 0.05, anchor = N) # vivian i will change the color later, i can't rn bc i have no wifi
 
@@ -51,12 +51,19 @@ class Intermediate(Frame):
 
             rel_y += 0.14
 
-        self.image = Image.open("sanrio.png")
-        resize_image = self.image.resize((60, 60))
-        img = ImageTk.PhotoImage(resize_image)
-        peach_lbl=Label(image=img)
-        peach_lbl.image = img
-        peach_lbl.place(x=100,y=103)
+            self.image = Image.open("sanrio.png")
+            resize_image = self.image.resize((60, 60))
+            img = ImageTk.PhotoImage(resize_image)
+            peach_lbl=Label(image=img)
+            peach_lbl.image = img
+            peach_lbl.place(x=100,y=103)
+
+            self.image = Image.open("peachimage.png")
+            resize_image = self.image.resize((20, 20))
+            img = ImageTk.PhotoImage(resize_image)
+            peach_lbl=Label(image=img)
+            peach_lbl.image = img
+            peach_lbl.place(x=302,y=31)
        
  #def retrieve_word1(self, event):
 

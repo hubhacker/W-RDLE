@@ -35,7 +35,7 @@ class Hard(Frame):
 #        canvas = Canvas()
         root.geometry("450x640")
         root.maxsize(450, 640)
-        root.config(bg = "#FFE8D6")
+        root.config(bg = "#6B705C")
 
         self.button_bg = Button(root, command = self.choose_word, width = 400, height = 600, bg = '#DDBEA9').place(x= 0, y = 0, relx = 0, rely= 0)
         self.button2 = Button(root, )
@@ -45,9 +45,10 @@ class Hard(Frame):
         
         
 
-        Label(self.frame, text = "HARD MODE", font=("Consolas", 15), bg = "#A5A58D").place(relx = 0.5, rely = 0.05, anchor = N)
+        Label(self.frame, text = "HARD MODE", font=("Consolas", 16), bg = "#A5A58D").place(relx = 0.5, rely = 0.05, anchor = N)
 
         rel_x = .12
+
         rel_y = .14
 
         #Button(self., text = " test ", command = self.retrieve_word1, font =("Consolas", 15), fg = "black", bg = "#F9DCC4", width=13, height=1).place(relx = .85, rely = .90, anchor = N)
