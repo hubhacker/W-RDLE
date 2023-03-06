@@ -1,6 +1,6 @@
 import tkinter
 
-from homepage import Application
+#from homepage import Application
 from easy_gamemode import Easy
 from intermediate_gamemode import Intermediate
 from hard_gamemode import Hard
@@ -21,16 +21,19 @@ class GameManager (object):
 
     def onclose_easy(self): 
         self.current_screen.destroy()
+        self.current_screen = self.easy_screen
         self.root.title("Easy Mode!")
         self.current_screen = Easy(self, master = self.root, callback_easy = self.onclose_easy)
 
     def onclose_intermediate(self):
         self.current_screen.destroy()
+        self.current_screen = self.intermediate_screen
         self.root.title("Intermediate Mode!")
         self.current_screen = Intermediate(self, master = self.root, callback_intermediate = self.onclose_intermediate)
 
     def onclose_hard(self):
         self.current_screen.destroy()
+        self.current_screen = self.hard_screen
         self.root.title("Hard Mode!")
         self.current_screen = Hard(self, master = self.root, callback_hard = self.onclose_hard)
 
