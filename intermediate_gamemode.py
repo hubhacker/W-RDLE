@@ -36,20 +36,20 @@ class Intermediate(Frame):
     def create_widgets_i(self,root):
         #canvas = Canvas()
         root.geometry("430x600")
-        root.maxsize(430, 600)
-        root.config(bg = "#f0e6ef")
+        root.maxsize(429, 600)
+        root.config(bg = "#e2eafc")
 
-        self.button_bg = Button(root, command = self.retrieve_word1, width = 400, height = 600, bg = '#DDBEA9').place(x= 0, y = 0, relx = 0, rely= 0)
-        self.button2 = Button(root, command = self.onclick_change, width = 50, height = 600, bg = '#fcba03').place(x= 0, y= 0, relx = 0, rely = 0)
+        self.button_bg = Button(root, command = self.retrieve_word1, width = 400, height = 600, bg = '#e2eafc').place(x= 0, y = 0, relx = 0, rely= 0)
+        self.button2 = Button(root, command = self.onclick_change, width = 50, height = 600, bg = '#e2eafc').place(x= 0, y= 0, relx = 0, rely = 0)
 
-        self.frame = Frame(root, width = 350, height = 520, bg = "#A5A58D")
-        self.frame.place(x = 20, y = 20, relx = 0.08, rely = 0.08)
+        self.frame = Frame(root, width = 350, height = 450, bg = "#BDE0FE")
+        self.frame.place(x = 19, y = 20, relx = 0.08, rely = 0.08)
 
-        Label(self.frame, text = "INTERMEDIATE MODE", font=("Consolas", 16), bg = "#A5A58D").place(relx = 0.5, rely = 0.05, anchor = N)
+        Label(self.frame, text = "INTERMEDIATE MODE", font=("Consolas", 16), bg = "#BDE0FE").place(relx = 0.5, rely = 0.05, anchor = N)
 
-        rel_x = 0.12
+        rel_x = 0.17
 
-        rel_y = 0.14
+        rel_y = 0.18
 
         for i in range(1,6):
             self.letter1 = Text(self.frame, width = 4, height = 2.4, font = ("Consolas"), bg = "#e2eafc")
