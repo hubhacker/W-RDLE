@@ -26,27 +26,27 @@ class Intermediate(Frame):
         canvas = Canvas()
         root.geometry("450x590")
         root.maxsize(450, 590)
-        root.config(bg = "#f0e6ef")
+        root.config(bg = "#e2eafc")
 
-        self.frame = Frame(root, width = 325, height = 430, bg = "#ead5f2") # I'LL CHANGE BG LATER
+        self.frame = Frame(root, width = 325, height = 430, bg = "#BDE0FE") # I'LL CHANGE BG LATER
         self.frame.place(x = 20, y = 20, relx = 0.08, rely = 0.08)
 
-        Label(self.frame, text = "INTERMEDIATE MODE", font=("Consolas", 15), bg = "#FFC8DD").place(relx = 0.5, rely = 0.05, anchor = N) # vivian i will change the color later, i can't rn bc i have no wifi
+        Label(self.frame, text = "INTERMEDIATE MODE", font=("Consolas", 15), bg = "#BDE0FE").place(relx = 0.5, rely = 0.05, anchor = N) # vivian i will change the color later, i can't rn bc i have no wifi
 
         rel_x = 0.17
         rel_y = 0.2
 
         for i in range(1,6):
-            self.letter1 = Text(self.frame, width = 4, height = 2.4, font = ("Consolas"), bg = "#f0e6ef")
+            self.letter1 = Text(self.frame, width = 4, height = 2.4, font = ("Consolas"), bg = "#e2eafc")
             self.letter1.place(relx = rel_x, rely = rel_y, anchor = N)
 
-            self.letter2 = Text(self.frame, width = 4, height = 2.4, font = ("Consolas"), bg = "#f0e6ef") # I'LL CHANGE BG LATER
+            self.letter2 = Text(self.frame, width = 4, height = 2.4, font = ("Consolas"), bg = "#e2eafc") # I'LL CHANGE BG LATER
             self.letter2.place(relx = rel_x * 2, rely = rel_y, anchor = N)
-            self.letter3 = Text(self.frame, width = 4, height = 2.4, font = ("Consolas"), bg = "#f0e6ef") # I'LL CHANGE BG LATER
+            self.letter3 = Text(self.frame, width = 4, height = 2.4, font = ("Consolas"), bg = "#e2eafc") # I'LL CHANGE BG LATER
             self.letter3.place(relx = rel_x * 3, rely = rel_y, anchor = N)
-            self.letter4 = Text(self.frame, width = 4, height = 2.4, font = ("Consolas"), bg = "#f0e6ef") # I'LL CHANGE BG LATER
+            self.letter4 = Text(self.frame, width = 4, height = 2.4, font = ("Consolas"), bg = "#e2eafc") # I'LL CHANGE BG LATER
             self.letter4.place(relx = rel_x *4, rely = rel_y, anchor = N)
-            self.letter5 = Text(self.frame, width = 4, height = 2.4, font = ("Consolas"), bg = "#f0e6ef") # I'LL CHANGE BG LATER
+            self.letter5 = Text(self.frame, width = 4, height = 2.4, font = ("Consolas"), bg = "#e2eafc") # I'LL CHANGE BG LATER
             self.letter5.place(relx = rel_x * 5, rely = rel_y, anchor = N)
 
             rel_y += 0.14
