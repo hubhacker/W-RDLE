@@ -36,8 +36,8 @@ class Hard(Frame):
         root.maxsize(450, 600)
         root.config(bg = "#FFE8D6")
 
-        self.button_bg = Button(root, command = self.choose_word, width = 400, height = 600, bg = '#DDBEA9').place(x= 0, y = 0, relx = 0, rely= 0)
-        self.button2 = Button(root, )
+        self.button_bg = Button(root, command = self.retrieve_word1, width = 400, height = 600, bg = '#DDBEA9').place(x= 0, y = 0, relx = 0, rely= 0)
+        self.button2 = Button(root, command = self.onclick_change, width = 50, height = 600, bg = '#fcba03').place(x= 0, y= 0, relx = 0, rely = 0)
 
         self.frame = Frame(root, width = 350, height = 500, bg = "#A5A58D")
         self.frame.place(x = 20, y = 20, relx = 0.08, rely = 0.08)
@@ -129,41 +129,26 @@ class Hard(Frame):
         self.letter36 = Text(self.frame, width = 4, height = 2.4, font = ("Consolas"), bg = "#FFE8D6")
         self.letter36.place(relx = rel_x+.75, rely = rel_y+.70, anchor = N)
             
-        
-        self.testletter = Text(self.frame, width = 4, height = 2.4, font = ("Consolas"), bg = "#FFE8D6")
-        self.testletter.place(relx = .80, rely = .90, anchor = N)
 
+    def retrieve_word1(self):
 
-        self.letter6.bind('<Return>, retrieve_word1')
+        self.letter1r = self.letter1.get(1.0, "end-1c")
+        self.letter2r = self.letter2.get(1.0, "end-1c")
+        self.letter3r = self.letter3.get(1.0, "end-1c")
+        self.letter4r = self.letter4.get(1.0, "end-1c")
+        self.letter5r = self.letter5.get(1.0, "end-1c")
+        self.letter6r = self.letter6.get(1.0, "end-1c")
 
-
-        
-    def checker(self, event=None):
-        enter = self.letter6.get('1.0', END)
-        lastletter_list = enter.split()
-        empty = True
-        
-        if empty == False:
-            pass
-
-
-
-    def retrieve_word1(self, event=None):
-
-        self.one = self.letter1.get(1.0, "end-1c")
-        self.two = self.letter2.get(1.0, "end-1c")
-        self.three = self.letter3.get(1.0, "end-1c")
-        self.four = self.letter4.get(1.0, "end-1c")
-        self.five = self.letter5.get(1.0, "end-1c")
-        self.six = self.letter6.get(1.0, "end-1c")
-
-        word = self.one + self.two + self + self.three + self.four + self.five + self.six
+        word = self.letter1r + self.letter2r + self.letter3r + self.letter4r + self.letter5r + self.letter6r
         print(word)
 
     def check_guess(self):
-        
-        if self.one == self.hardword_split[0]:
+        if self.letter1r == self.hardword_split[0]:
             self.letter1 = Text(self.frame, width = 4, height = 2.4, font = ("Consolas"), bg = "#3cb542")
+        
+    def onclick_change(self, event=None):
+        self.letter1.tag_add(f'{self.letter1r}')
+        self.letter1.tag_config(f'{self.letter1r}', background = 'green', foreground = 'white')
 
 
 
