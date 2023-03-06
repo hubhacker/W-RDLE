@@ -141,16 +141,15 @@ class Hard(Frame):
         self.image = Image.open("peachimage.png")
         resize_image = self.image.resize((20, 20))
         img = ImageTk.PhotoImage(resize_image)
-        peach_lbl=Label(image=img)
-        peach_lbl.image = img
-        peach_lbl.place(x=140,y=100)
+        peach_lbl=Label(self.frame, )
+        peach_lbl.place(x=10,y=10)
 
-        self.image2 = Image.open("peachimage.png")
-        resize_image = self.image2.resize((20, 20))
-        img2 = ImageTk.PhotoImage(resize_image)
-        peach_lbl=Label(image=img2)
-        peach_lbl.image = img2
-        peach_lbl.place(x=295,y=100)
+        # resize_image = self.image2.resize((20, 20))
+
+        # img2 = ImageTk.PhotoImage(resize_image)
+        # peach_lbl2=Label(self.frame, image=img2)
+        # peach_lbl2.image = img2
+        # peach_lbl2.place(x=10,y=10)
 
 
         
