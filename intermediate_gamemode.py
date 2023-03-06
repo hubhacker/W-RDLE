@@ -1,4 +1,5 @@
 from tkinter import *
+import tkinter
 from PIL import Image, ImageTk
 import random
 
@@ -7,8 +8,8 @@ class Intermediate(Frame):
     def __init__(self, master):
 
         super(Intermediate, self).__init__(master)
-        self.create_widgets()
         self.file = ("midyear_5letterwords.txt")
+        self.create_widgets_i(master)
 
     def choose_word(self, file): 
 
@@ -21,8 +22,8 @@ class Intermediate(Frame):
 
         self.intword = self.fiveletterlist([random.randint(0, 1000)])
 
-    def create_widgets(self):
-
+    def create_widgets_i(self,root):
+#        canvas = Canvas()
         root.geometry("400x600")
         root.maxsize(400, 600)
         root.config(bg = "#F8EDEB") # I'LL CHANGE BG LATER
@@ -76,10 +77,10 @@ class Intermediate(Frame):
         #word = l1 + l2 + l3 + l4 + l5 + l6
         #return word
 
-root = Tk() 
+#root = Tk() 
 
 #root.bind('<Return, retrieve_word1')
 
-root.title("Intermediate Mode")
-app = Intermediate(root)
-root.mainloop()
+#root.title("Intermediate Mode")
+#app = Intermediate(root)
+#root.mainloop()
