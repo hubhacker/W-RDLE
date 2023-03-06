@@ -33,7 +33,7 @@ class Hard(Frame):
 
     def create_widgets_h(self, root):
 #        canvas = Canvas()
-        root.geometry("400x600")
+        root.geometry("450x640")
         root.maxsize(400, 600)
         root.config(bg = "#FFE8D6")
 
