@@ -50,7 +50,7 @@ class Application(Frame):
 
         canvas.create_line(2, 22, 500, 22, dash=(7), width=2)
         canvas.create_line(2, 235, 500, 235, dash=(7), width=2)
-#        canvas.pack()
+        canvas.pack()
 
     def setup_easy(self):
         root = Tk()
