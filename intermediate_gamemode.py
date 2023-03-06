@@ -24,12 +24,12 @@ class Intermediate(Frame):
 
     def create_widgets_i(self,root):
         canvas = Canvas()
-        root.geometry("430x600")
-        root.maxsize(430, 600)
+        root.geometry("450x590")
+        root.maxsize(450, 590)
         root.config(bg = "#f0e6ef")
 
-        self.frame = Frame(root, width = 400, height = 600, bg = "#ead5f2") # I'LL CHANGE BG LATER
-        self.frame.place(x = 0, y = 0)
+        self.frame = Frame(root, width = 325, height = 430, bg = "#ead5f2") # I'LL CHANGE BG LATER
+        self.frame.place(x = 20, y = 20, relx = 0.08, rely = 0.08)
 
         Label(self.frame, text = "INTERMEDIATE MODE", font=("Consolas", 15), bg = "#FFC8DD").place(relx = 0.5, rely = 0.05, anchor = N) # vivian i will change the color later, i can't rn bc i have no wifi
 
