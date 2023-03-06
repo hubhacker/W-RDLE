@@ -1,4 +1,5 @@
 from tkinter import *
+import tkinter
 from PIL import Image, ImageTk
 import random
 
@@ -7,13 +8,12 @@ class Hard(Frame):
     def __init__(self, master):
 
         super(Hard, self).__init__(master)
-        self.grid()
-        self.create_widgets()
-        self.file = "midyear_6letterwords.txt"
+        self.file = ("midyear_6letterwords.txt")
+        self.create_widgets_h(master)
 
-    def choose_word(self): 
+    def choose_word(self, file): 
 
-        sixletter = open("midyear_6letterwords.txt")
+        sixletter = open(file)
 
         self.sixletterlist = []
 
@@ -31,23 +31,23 @@ class Hard(Frame):
 
         print(self.hardword)
 
-    def create_widgets(self):
-        canvas = Canvas()
-        root.geometry("450x640")
-        root.maxsize(450, 640)
+    def create_widgets_h(self, root):
+#        canvas = Canvas()
+        root.geometry("400x600")
+        root.maxsize(400, 600)
         root.config(bg = "#FFE8D6")
 
-        self.button_bg = Button(root, command = self.choose_word, width = 400, height = 600, bg = '#DDBEA9').place(x= 0, y = 0, relx = 0, rely= 0)
+        self.button_bg = Button(root, command = self.choose_word, width = 400, height = 600, bg = '#32a852').place(x= 0, y = 0, relx = 0, rely= 0)
         self.button2 = Button(root, )
 
-        self.frame = Frame(root, width = 350, height = 520, bg = "#A5A58D")
+        self.frame = Frame(root, width = 300, height = 500, bg = "#CB997E")
         self.frame.place(x = 20, y = 20, relx = 0.08, rely = 0.08)
         
         
 
-        Label(self.frame, text = "HARD MODE", font=("Consolas", 15), bg = "#A5A58D").place(relx = 0.5, rely = 0.05, anchor = N)
+        Label(self.frame, text = "HARD MODE", font=("Consolas", 13), bg = "#CB997E").place(relx = 0.5, rely = 0.05, anchor = N)
 
-        rel_x = .12
+        rel_x = .1
         rel_y = .14
 
         #Button(self., text = " test ", command = self.retrieve_word1, font =("Consolas", 15), fg = "black", bg = "#F9DCC4", width=13, height=1).place(relx = .85, rely = .90, anchor = N)
@@ -199,13 +199,13 @@ class Hard(Frame):
         self.delete(0.0, END)
         self.letter1.insert(0.0, letter)"""
     
-root = Tk()
+#root = Tk()
 
-root.bind('<Return>, retrieve_word1')
+#root.bind('<Return>, retrieve_word1')
 
-root.title("Hard")
-app = Hard(root)
-root.mainloop()
+#root.title("Hard")
+#app = Hard(root)
+#root.mainloop()
         
 
         

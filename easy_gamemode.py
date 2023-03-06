@@ -1,18 +1,19 @@
 from tkinter import *
+import tkinter
 from PIL import Image, ImageTk
 import random
 
 class Easy(Frame):
 
-    def __init__(self,master):
+    def __init__(self, master):
 
         super(Easy, self).__init__(master)
-        self.create_widgets()
-        self.file=("midyear_4letterwords.txt")
+        self.file = ("midyear_4letterwords.txt")
+        self.create_widgets_e(master)
     
-    def choose_word(self): 
+    def choose_word(self,file):
 
-        fourletter = open("midyear_4letterwords.txt")
+        fourletter = open(file)
 
         self.fourletterlist = []
 
@@ -31,9 +32,8 @@ class Easy(Frame):
         print(self.easyword)
 
     
-    def create_widgets(self):
-
-        
+    def create_widgets_e(self, root):
+#        canvas = Canvas()        
         root.geometry("400x600")
         root.maxsize(400, 600)
         root.config(bg = "#F8EDEB")
@@ -99,10 +99,10 @@ class Easy(Frame):
 
         self.image = Image.open("peachimage.png")
         resize_image = self.image.resize((30, 40))
-#        self.image=PhotoImage(file='peachimage.png')
+#        self.image = PhotoImage(file='peachimage.png')
 #        img = self.image.PhotoImage(resize_image)
         img = ImageTk.PhotoImage(resize_image)
-        peach_lbl=Label(image=img)
+        peach_lbl=Label(image = img)
         peach_lbl.image = img
         peach_lbl.place(x=110,y=80)
 
@@ -174,7 +174,7 @@ class Easy(Frame):
         self.letter1.insert(0.0, letter)"""
 
 
-root = Tk()
-root.title("EASY MODE")
-app = Easy(root)
-root.mainloop()
+#root = Tk()
+#root.title("EASY MODE")
+#app = Easy(root)
+#root.mainloop()
