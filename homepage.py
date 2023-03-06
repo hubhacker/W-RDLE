@@ -8,7 +8,7 @@ from game_manager import GameManager
 
 class Application(Frame):
     def init(self, master):
-        super(Application, self).init(master)
+        super(Application, self).__init__(master)
         self.create_widgets()
         self.easy_screen = None
         self.intermediate_screen = None
