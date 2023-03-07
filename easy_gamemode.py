@@ -98,41 +98,6 @@ class Easy(Frame):
         self.letter24 = Text(self.frame, width = 4, height = 2.4, font = ("Consolas"), bg = "#F8EDEB")
         self.letter24.place(relx = 0.8, rely = 0.80, anchor = N)
 
-        self.image = Image.open("peachimage.png")
-        resize_image = self.image.resize((30, 40))
-#        self.image = PhotoImage(file='peachimage.png')
-#        img = self.image.PhotoImage(resize_image)
-        img = ImageTk.PhotoImage(resize_image)
-        peach_lbl=Label(image = img)
-        peach_lbl.image = img
-        peach_lbl.place(x=110,y=80)
-
-        self.image2 = Image.open("peach.jpg")
-        resize_image = self.image2.resize((20, 20))
-#        self.image=PhotoImage(file='peachimage.png')
-#        img = self.image.PhotoImage(resize_image)
-        img2 = ImageTk.PhotoImage(resize_image)
-        peach_lbl2=Label(image=img2)
-        peach_lbl2.image = img2
-        peach_lbl2.place(x=70,y=90)
-
-        self.image3 = Image.open("peachimage.png")
-        resize_image = self.image3.resize((30, 40))
-#        self.image=PhotoImage(file='peachimage.png')
-#        img = self.image.PhotoImage(resize_image)
-        img3 = ImageTk.PhotoImage(resize_image)
-        peach_lbl=Label(image=img3)
-        peach_lbl.image = img3
-        peach_lbl.place(x=260,y=80)
-
-        self.image4 = Image.open("peach.jpg")
-        resize_image = self.image4.resize((20, 20))
-#        self.image=PhotoImage(file='peachimage.png')
-#        img = self.image.PhotoImage(resize_image)
-        img4 = ImageTk.PhotoImage(resize_image)
-        peach_lbl2=Label(image=img4)
-        peach_lbl2.image = img4
-        peach_lbl2.place(x=310,y=90)
 
     def checker(self, event=None):
         enter = self.letter4.get('1.0', END)
