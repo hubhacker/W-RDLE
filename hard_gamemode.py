@@ -7,7 +7,7 @@ from tkinter import simpledialog
 from os import path
 
 class Hard(Frame):
-
+# ok first were gonna make some widgets 
     def __init__(self, master):
         super(Hard, self).__init__(master)
         self.create_widgets_h(master)
@@ -16,7 +16,7 @@ class Hard(Frame):
         self.curword = 0
 
     def choose_word(self, file):
-
+# have to get the six letter file since this is hard mode and hard mode is 6 letters
         sixletter = open(file)
 
         self.sixletterlist = []
