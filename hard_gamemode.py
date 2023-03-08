@@ -138,6 +138,7 @@ class Hard(Frame):
 
 
     def request_hint(self):
+        open(path.expanduser('~/.wordlescore'), 'a+').close()
         with open(path.expanduser('~/.wordlescore'), 'r+') as file:
             score = file.read().strip()
             try:
@@ -158,6 +159,7 @@ class Hard(Frame):
         if not answer:
             mb.showinfo('Canceled', 'The transaction has been canceled.')
         else:
+            open(path.expanduser('~/.wordlescore'), 'a+').close()
             with open(path.expanduser('~/.wordlescore'), 'r+') as file:
                 file.seek(0)
                 file.write(str(score - 250))
@@ -226,6 +228,7 @@ class Hard(Frame):
     def check_guess(self, word):
         if word.lower() == self.hardword:
             self.winfo_toplevel().attributes('-topmost', False)
+            open(path.expanduser('~/.wordlescore'), 'a+').close()
             with open(path.expanduser('~/.wordlescore'), 'r+') as file:
                 score = file.read().strip()
                 try:
