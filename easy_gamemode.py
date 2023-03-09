@@ -1,7 +1,10 @@
 from tkinter import *
 import tkinter
-from PIL import Image, ImageTk
+#from PIL import Image, ImageTk
 import random
+from tkinter import messagebox as mb
+from tkinter import simpledialog
+from os import path
 
 class Easy(Frame):
 
