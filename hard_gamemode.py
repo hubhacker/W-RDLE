@@ -1,6 +1,6 @@
 from tkinter import *
 import tkinter
-#from PIL import Image, ImageTk
+from PIL import Image, ImageTk
 import random
 from tkinter import messagebox as mb
 from tkinter import simpledialog
@@ -238,12 +238,10 @@ class Hard(Frame):
                     score = 0
                 file.seek(0)
                 file.write(str(score + 250))
-                file.truncate()
             conj = 'y'
             if self.curword + 1 != 1:
                 conj = 'ies'
-            mb.showinfo("You win!!!", f"You got the word correct in {self.curword + 1} tr{conj}: {self.hardword}.\n" +
-                "You have gained 250 points!")
+            mb.showinfo("You win!!!", f"You got the word correct in {self.curword + 1} tr{conj}: {self.hardword}.\n" + "You have gained 250 points!")
             self.winfo_toplevel().destroy()
         else:
             self.button_bg.configure(state=tkinter.DISABLED)
@@ -260,8 +258,8 @@ class Hard(Frame):
                     mb.showinfo("Can't change correct letter",
                         f"The {i + 1}{ending} letter ({self.hardword[i]}) was correct last attempt. " +
                         "You can't change it to an incorrect one now.")
-                    self.button_bg.configure(state=tkinter.NORMAL)
-                    self.button2.configure(state=tkinter.NORMAL)
+                    self.button_bg.configure(state = tkinter.NORMAL)
+                    self.button2.configure(state = tkinter.NORMAL)
                     return
                 i += 1
             i = 0
