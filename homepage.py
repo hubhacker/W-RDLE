@@ -3,11 +3,11 @@ from easy_gamemode import Easy
 from intermediate_gamemode import Intermediate
 from hard_gamemode import Hard
 from os import path
-
+# import everything for tkinter and all that
 class Application(Frame):
 
     def __init__(self, master):
-
+# make the attributes i think for like each screen, each gamemode 
         super(Application, self).__init__(master)
         self.create_widgets()
         self.easy_screen = None
@@ -24,13 +24,14 @@ class Application(Frame):
             except:
                 file.write('0')
                 score = 0
+                #create label for the score
             self.score_label.configure(text=f'Points: {score}')
         self.after(2500, self.update_score)
-
+# have a way to update the score in homepage
 
     def create_widgets(self):
         canvas = Canvas()
-
+# print out the menu screen, the selection buttons for each gamemode
         Label(root, text = "W♾RDLE", font=("Consolas", 30), fg = "black").place(x=110,y=1)
         Button(root, text = " EASY ", command = self.setup_easy, font =("Consolas", 15), fg = "black", bg = "#F9DCC4", width=13, height=1).place(x=220,y=65)
         Button(root, text = "INTERMEDIATE", command = self.setup_intermediate, font =("Consolas", 15), fg = "white", bg= "#6191BF", width=13, height=1).place(x=220, y=115)
@@ -38,7 +39,7 @@ class Application(Frame):
         Label(root, text = "Gamemode", font=("Consolas", 20), fg = "black").place(x=50,y=70)
         Label(root, text = "Choose a gamemode", font=("Consolas", 10), fg = "black").place(x=50,y=120)
         Label(root, text = "to the right.", font=("Consolas", 10), fg = "black").place(x=60,y=140)
-
+# label for our score keeper, along with the print outs for the instructions!!!!
         self.score_label = Label(root, text='Points: --', font=('Consolas', 12), fg='black', bg='#EAE37F')
         self.score_label.place(x=55, y=180)
         Label(root, text = "Instructions", font=("Consolas", 20), fg = "black").place(x=30,y=250)
@@ -54,6 +55,7 @@ class Application(Frame):
         Label(root, text = "somewhere in the word turn yellow, and the completely wrong", font=("Consolas", 8), fg = "black").place(x=22,y=480)
         Label(root, text = "letters turn gray. Try your best to guess the word, have fun!", font=("Consolas", 8), fg = "black").place(x=22,y=500)
 
+# to make it extra fancy i added a coupe borders from lines and dotted lines
         canvas.create_line(2, 27, 500, 27, width=2)
         canvas.create_line(2, 230, 500, 230, width=2)
 
@@ -61,9 +63,10 @@ class Application(Frame):
         canvas.create_line(2, 235, 500, 235, dash=(7), width=2)
         canvas.pack()
 
+# make sure to update score !!!!!!! stays up to date
         self.update_score()
         
-        
+    # this is basically just to take you from homepage to each of the game mode pages!  
     def setup_easy(self):
         root = Tk()
         root.attributes('-topmost', True)
@@ -81,7 +84,7 @@ class Application(Frame):
         root.attributes('-topmost', True)
         root.title("HARD MODE")
         app = Hard(root)
-
+# except shop page does not actually exist
     def setup_shop(self):
         pass
 

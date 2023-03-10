@@ -1,3 +1,4 @@
+# comments for these are written on intermediate_gamemode.py
 from tkinter import *
 import tkinter
 #from PIL import Image, ImageTk
