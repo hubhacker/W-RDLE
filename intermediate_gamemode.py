@@ -7,16 +7,14 @@ from tkinter import simpledialog
 from os import path
 
 class Intermediate(Frame):
-
     def __init__(self, master):
         super(Intermediate, self).__init__(master)
         self.file = ("midyear_5letterwords.txt")
         self.choose_word(self.file)
         self.create_widgets_i(master)
-        self.curwood = 0
+        self.curword = 0
 
     def choose_word(self, file): 
-
         fiveletter = open(file)
 
         self.fiveletterlist = []
@@ -38,50 +36,90 @@ class Intermediate(Frame):
 
     def create_widgets_i(self,root):
         #canvas = Canvas()
-        root.geometry("430x600")
-        root.maxsize(429, 600)
+        root.geometry("450x640")
+        root.maxsize(450, 640)
         root.config(bg = "#e2eafc")
 
-        self.button_bg = Button(root, command = self.retrieve_word1, width = 400, height = 600, bg = '#e2eafc').place(x= 0, y = 0, relx = 0, rely= 0)
-        self.button2 = Button(root, command = self.onclick_change, width = 50, height = 600, bg = '#e2eafc').place(x= 0, y= 0, relx = 0, rely = 0)
+        self.button2 = Button(root, command = self.onclick_change, width = 50, height = 600, bg = '#e2eafc')
 
-        self.frame = Frame(root, width = 350, height = 450, bg = "#BDE0FE")
-        self.frame.place(x = 19, y = 20, relx = 0.08, rely = 0.08)
+        self.frame = Frame(root, width = 350, height = 520, bg = "#bde0fe")
+        self.frame.place(x = 20, y = 20, relx = 0.08, rely = 0.08)
 
         Label(self.frame, text = "INTERMEDIATE MODE", font=("Consolas", 16), bg = "#BDE0FE").place(relx = 0.5, rely = 0.05, anchor = N)
+        self.button_bg = Button(self.frame, command = self.retrieve_word1, width = 15, height = 2, text='Guess', bg = '#DDBEA9')
+        self.hint_btn = Button(self.frame, command=self.request_hint, width=3, height=2, text='Hint', bg='#0000FF', fg='#ffffff')
+        rel_x = .12
 
-        rel_x = 0.17
+        rel_y = .14
 
-        rel_y = 0.18
+        self.letter1 = Text(self.frame, width = 4, height = 2.4, font = ("Consolas"), bg = "#F8EDEB")
+        self.letter1.place(relx = 0.1, rely = 0.14, anchor = N)
+        self.letter2 = Text(self.frame, width = 4, height = 2.4, font = ("Consolas"), bg = "#F8EDEB")
+        self.letter2.place(relx = 0.3, rely = 0.14, anchor = N)
+        self.letter3 = Text(self.frame, width = 4, height = 2.4, font = ("Consolas"), bg = "#F8EDEB")
+        self.letter3.place(relx = 0.5, rely = 0.14, anchor = N)
+        self.letter4 = Text(self.frame, width = 4, height = 2.4, font = ("Consolas"), bg = "#F8EDEB")
+        self.letter4.place(relx = 0.7, rely = 0.14, anchor = N)
+        self.letter5 = Text(self.frame, width = 4, height = 2.4, font = ("Consolas"), bg = "#F8EDEB")
+        self.letter5.place(relx = 0.9, rely = 0.14, anchor = N)
 
-        for i in range(1,6):
-            self.letter1 = Text(self.frame, width = 4, height = 2.4, font = ("Consolas"), bg = "#e2eafc")
-            self.letter1.place(relx = rel_x, rely = rel_y, anchor = N)
+        self.letter6 = Text(self.frame, width = 4, height = 2.4, font = ("Consolas"), bg = "#F8EDEB")
+        self.letter6.place(relx = 0.1, rely = 0.26, anchor = N)
+        self.letter7 = Text(self.frame, width = 4, height = 2.4, font = ("Consolas"), bg = "#F8EDEB")
+        self.letter7.place(relx = 0.3, rely = 0.26, anchor = N)
+        self.letter8 = Text(self.frame, width = 4, height = 2.4, font = ("Consolas"), bg = "#F8EDEB")
+        self.letter8.place(relx = 0.5, rely = 0.26, anchor = N)
+        self.letter9 = Text(self.frame, width = 4, height = 2.4, font = ("Consolas"), bg = "#F8EDEB")
+        self.letter9.place(relx = 0.7, rely = 0.26, anchor = N)
+        self.letter10 = Text(self.frame, width = 4, height = 2.4, font = ("Consolas"), bg = "#F8EDEB")
+        self.letter10.place(relx = 0.9, rely = 0.26, anchor = N)
 
-            self.letter2 = Text(self.frame, width = 4, height = 2.4, font = ("Consolas"), bg = "#e2eafc") # I'LL CHANGE BG LATER
-            self.letter2.place(relx = rel_x * 2, rely = rel_y, anchor = N)
-            self.letter3 = Text(self.frame, width = 4, height = 2.4, font = ("Consolas"), bg = "#e2eafc") # I'LL CHANGE BG LATER
-            self.letter3.place(relx = rel_x * 3, rely = rel_y, anchor = N)
-            self.letter4 = Text(self.frame, width = 4, height = 2.4, font = ("Consolas"), bg = "#e2eafc") # I'LL CHANGE BG LATER
-            self.letter4.place(relx = rel_x *4, rely = rel_y, anchor = N)
-            self.letter5 = Text(self.frame, width = 4, height = 2.4, font = ("Consolas"), bg = "#e2eafc") # I'LL CHANGE BG LATER
-            self.letter5.place(relx = rel_x * 5, rely = rel_y, anchor = N)
+        self.letter11 = Text(self.frame, width = 4, height = 2.4, font = ("Consolas"), bg = "#F8EDEB")
+        self.letter11.place(relx = 0.1, rely = 0.38, anchor = N)
+        self.letter12 = Text(self.frame, width = 4, height = 2.4, font = ("Consolas"), bg = "#F8EDEB")
+        self.letter12.place(relx = 0.3, rely = 0.38, anchor = N)
+        self.letter13 = Text(self.frame, width = 4, height = 2.4, font = ("Consolas"), bg = "#F8EDEB")
+        self.letter13.place(relx = 0.5, rely = 0.38, anchor = N)
+        self.letter14 = Text(self.frame, width = 4, height = 2.4, font = ("Consolas"), bg = "#F8EDEB")
+        self.letter14.place(relx = 0.7, rely = 0.38, anchor = N)
+        self.letter15 = Text(self.frame, width = 4, height = 2.4, font = ("Consolas"), bg = "#F8EDEB")
+        self.letter15.place(relx = 0.9, rely = 0.38, anchor = N)
 
-            rel_y += 0.14
+        self.letter16 = Text(self.frame, width = 4, height = 2.4, font = ("Consolas"), bg = "#F8EDEB")
+        self.letter16.place(relx = 0.1, rely = 0.50, anchor = N)
+        self.letter17 = Text(self.frame, width = 4, height = 2.4, font = ("Consolas"), bg = "#F8EDEB")
+        self.letter17.place(relx = 0.3, rely = 0.50, anchor = N)
+        self.letter18 = Text(self.frame, width = 4, height = 2.4, font = ("Consolas"), bg = "#F8EDEB")
+        self.letter18.place(relx = 0.5, rely = 0.50, anchor = N)
+        self.letter19 = Text(self.frame, width = 4, height = 2.4, font = ("Consolas"), bg = "#F8EDEB")
+        self.letter19.place(relx = 0.7, rely = 0.50, anchor = N)
+        self.letter20 = Text(self.frame, width = 4, height = 2.4, font = ("Consolas"), bg = "#F8EDEB")
+        self.letter20.place(relx = 0.9, rely = 0.50, anchor = N)
+        
+        self.letter21 = Text(self.frame, width = 4, height = 2.4, font = ("Consolas"), bg = "#F8EDEB")
+        self.letter21.place(relx = 0.1, rely = 0.62, anchor = N)
+        self.letter22 = Text(self.frame, width = 4, height = 2.4, font = ("Consolas"), bg = "#F8EDEB")
+        self.letter22.place(relx = 0.3, rely = 0.62, anchor = N)
+        self.letter23 = Text(self.frame, width = 4, height = 2.4, font = ("Consolas"), bg = "#F8EDEB")
+        self.letter23.place(relx = 0.5, rely = 0.62, anchor = N)
+        self.letter24 = Text(self.frame, width = 4, height = 2.4, font = ("Consolas"), bg = "#F8EDEB")
+        self.letter24.place(relx = 0.7, rely = 0.62, anchor = N)
+        self.letter25 = Text(self.frame, width = 4, height = 2.4, font = ("Consolas"), bg = "#F8EDEB")
+        self.letter25.place(relx = 0.9, rely = 0.62, anchor = N)
 
-        # self.image = Image.open("sanrio.png")
-        # resize_image = self.image.resize((60, 60))
-        # img = ImageTk.PhotoImage(resize_image)
-        # peach_lbl=Label(image=img)
-        # peach_lbl.image = img
-        # peach_lbl.place(x=100,y=103)
+        self.letter26 = Text(self.frame, width = 4, height = 2.4, font = ("Consolas"), bg = "#F8EDEB")
+        self.letter26.place(relx = 0.1, rely = 0.74, anchor = N)
+        self.letter27 = Text(self.frame, width = 4, height = 2.4, font = ("Consolas"), bg = "#F8EDEB")
+        self.letter27.place(relx = 0.3, rely = 0.74, anchor = N)
+        self.letter28 = Text(self.frame, width = 4, height = 2.4, font = ("Consolas"), bg = "#F8EDEB")
+        self.letter28.place(relx = 0.5, rely = 0.74, anchor = N)
+        self.letter29 = Text(self.frame, width = 4, height = 2.4, font = ("Consolas"), bg = "#F8EDEB")
+        self.letter29.place(relx = 0.7, rely = 0.74, anchor = N)
+        self.letter30 = Text(self.frame, width = 4, height = 2.4, font = ("Consolas"), bg = "#F8EDEB")
+        self.letter30.place(relx = 0.9, rely = 0.74, anchor = N)
 
-        # self.image = Image.open("peachimage.png")
-        # resize_image = self.image.resize((20, 20))
-        # img = ImageTk.PhotoImage(resize_image)
-        # peach_lbl=Label(image=img)
-        # peach_lbl.image = img
-        # peach_lbl.place(x=302,y=31)
+        self.button_bg.place(relx = 0.4, rely = rel_y+.77, anchor = N)
+        self.hint_btn.place(relx = 0.8, rely = rel_y+.77, anchor = N)
        
     def request_hint(self):
         open(path.expanduser('~/.wordlescore'), 'a+').close()
@@ -111,8 +149,8 @@ class Intermediate(Frame):
                 file.write(str(score - 250))
                 file.truncate()
             while True:
-                n = simpledialog.askstring('Letter', 'Which letter do you want to reveal? (1, 2, 3, 4, 5, or 6)?')
-                if n not in ['1', '2', '3', '4', '5', '6']:
+                n = simpledialog.askstring('Letter', 'Which letter do you want to reveal? (1, 2, 3, 4, or 5)?')
+                if n not in ['1', '2', '3', '4', '5']:
                     mb.showinfo('Invalid', 'Invalid input')
                     continue
                 n = int(n)
@@ -125,7 +163,7 @@ class Intermediate(Frame):
 
     def retrieve_word1(self):
 
-        for i in range(36):
+        for i in range(30):
             setattr(self, f'letter{i + 1}r', getattr(self, f'letter{i + 1}').get(1.0, 'end-1c'))
 
         word = ''
@@ -215,19 +253,19 @@ class Intermediate(Frame):
             for l in word.lower():
                 if self.intermediateword[i] == l:
                     self.correct[i] = True
-                    getattr(self, 'letter' + str((self.curword * 6) + (i + 1))).configure(bg='#00ff00')
+                    getattr(self, 'letter' + str((self.curword * 5) + (i + 1))).configure(bg='#00ff00')
                     if l in seen:
                         seen[l] += 1
                     else:
                         seen[l] = 1
 
                 else:
-                    getattr(self, 'letter' + str((self.curword * 6) + (i + 1))).configure(bg='#808080')
+                    getattr(self, 'letter' + str((self.curword * 5) + (i + 1))).configure(bg='#808080')
                 i += 1
             i = 0
             for l in word.lower():
                 if self.intermediateword[i] != l and l in self.intermediateword and seen[l] < self.intermediateword.count(l):
-                    getattr(self, 'letter' + str((self.curword * 6) + (i + 1))).configure(bg='#ffff00')
+                    getattr(self, 'letter' + str((self.curword * 5) + (i + 1))).configure(bg='#ffff00')
                     if l in seen:
                         seen[l] += 1
                     else:
@@ -240,77 +278,68 @@ class Intermediate(Frame):
                 self.letter3.configure(state='disabled')
                 self.letter4.configure(state='disabled')
                 self.letter5.configure(state='disabled')
-                self.letter6.configure(state='disabled')
 
+                self.letter6.configure(state='normal')
                 self.letter7.configure(state='normal')
                 self.letter8.configure(state='normal')
                 self.letter9.configure(state='normal')
                 self.letter10.configure(state='normal')
-                self.letter11.configure(state='normal')
-                self.letter12.configure(state='normal')
             elif self.curword == 2:
+                self.letter6.configure(state='disabled')
                 self.letter7.configure(state='disabled')
                 self.letter8.configure(state='disabled')
                 self.letter9.configure(state='disabled')
                 self.letter10.configure(state='disabled')
-                self.letter11.configure(state='disabled')
-                self.letter12.configure(state='disabled')
 
+                self.letter11.configure(state='normal')
+                self.letter12.configure(state='normal')
                 self.letter13.configure(state='normal')
                 self.letter14.configure(state='normal')
                 self.letter15.configure(state='normal')
-                self.letter16.configure(state='normal')
-                self.letter17.configure(state='normal')
-                self.letter18.configure(state='normal')
+
             elif self.curword == 3:
+                self.letter11.configure(state='disabled')
+                self.letter12.configure(state='disabled')
                 self.letter13.configure(state='disabled')
                 self.letter14.configure(state='disabled')
                 self.letter15.configure(state='disabled')
+
+                self.letter16.configure(state='normal')
+                self.letter17.configure(state='normal')
+                self.letter18.configure(state='normal')
+                self.letter19.configure(state='normal')
+                self.letter20.configure(state='normal')
+            elif self.curword == 4:
                 self.letter16.configure(state='disabled')
                 self.letter17.configure(state='disabled')
                 self.letter18.configure(state='disabled')
+                self.letter19.configure(state='disabled')
+                self.letter20.configure(state='disabled')
 
-                self.letter19.configure(state='normal')
-                self.letter20.configure(state='normal')
                 self.letter21.configure(state='normal')
                 self.letter22.configure(state='normal')
                 self.letter23.configure(state='normal')
                 self.letter24.configure(state='normal')
-            elif self.curword == 4:
-                self.letter19.configure(state='disabled')
-                self.letter20.configure(state='disabled')
+                self.letter25.configure(state='normal')
+            elif self.curword == 5:
                 self.letter21.configure(state='disabled')
                 self.letter22.configure(state='disabled')
                 self.letter23.configure(state='disabled')
                 self.letter24.configure(state='disabled')
+                self.letter25.configure(state='disabled')
 
-                self.letter25.configure(state='normal')
                 self.letter26.configure(state='normal')
                 self.letter27.configure(state='normal')
                 self.letter28.configure(state='normal')
                 self.letter29.configure(state='normal')
                 self.letter30.configure(state='normal')
-            elif self.curword == 5:
-                self.letter25.configure(state='disabled')
+
+            elif self.curword == 6:
                 self.letter26.configure(state='disabled')
                 self.letter27.configure(state='disabled')
                 self.letter28.configure(state='disabled')
                 self.letter29.configure(state='disabled')
                 self.letter30.configure(state='disabled')
-
-                self.letter31.configure(state='normal')
-                self.letter32.configure(state='normal')
-                self.letter33.configure(state='normal')
-                self.letter34.configure(state='normal')
-                self.letter35.configure(state='normal')
-                self.letter36.configure(state='normal')
-            elif self.curword == 6:
-                self.letter31.configure(state='disabled')
-                self.letter32.configure(state='disabled')
-                self.letter33.configure(state='disabled')
-                self.letter34.configure(state='disabled')
-                self.letter35.configure(state='disabled')
-                self.letter36.configure(state='disabled')
 
                 self.winfo_toplevel().attributes('-topmost', False)
                 mb.showinfo("Game over", f"You lost. The word was: {self.intermediateword}")

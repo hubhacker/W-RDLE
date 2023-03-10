@@ -7,7 +7,6 @@ from tkinter import simpledialog
 from os import path
 
 class Hard(Frame):
-# ok first were gonna make some widgets 
     def __init__(self, master):
         super(Hard, self).__init__(master)
         self.create_widgets_h(master)
@@ -16,7 +15,6 @@ class Hard(Frame):
         self.curword = 0
 
     def choose_word(self, file):
-# have to get the six letter file since this is hard mode and hard mode is 6 letters
         sixletter = open(file)
 
         self.sixletterlist = []
@@ -49,6 +47,7 @@ class Hard(Frame):
         Label(self.frame, text = "HARD MODE", font=("Consolas", 16), bg = "#A5A58D").place(relx = 0.5, rely = 0.05, anchor = N)
         self.button_bg = Button(self.frame, command = self.retrieve_word1, width = 15, height = 2, text='Guess', bg = '#DDBEA9')
         self.hint_btn = Button(self.frame, command=self.request_hint, width=3, height=2, text='Hint', bg='#0000FF', fg='#ffffff')
+        
         rel_x = .12
 
         rel_y = .14
@@ -219,7 +218,6 @@ class Hard(Frame):
         print('try', word, self.curword)
         self.check_guess(word)
 
-
     def maxlength(sv):
         if len(sv.get()) > 1:
             sv.set(sv.get()[0])
@@ -300,6 +298,7 @@ class Hard(Frame):
                 self.letter10.configure(state='normal')
                 self.letter11.configure(state='normal')
                 self.letter12.configure(state='normal')
+
             elif self.curword == 2:
                 self.letter7.configure(state='disabled')
                 self.letter8.configure(state='disabled')
@@ -314,6 +313,7 @@ class Hard(Frame):
                 self.letter16.configure(state='normal')
                 self.letter17.configure(state='normal')
                 self.letter18.configure(state='normal')
+
             elif self.curword == 3:
                 self.letter13.configure(state='disabled')
                 self.letter14.configure(state='disabled')
@@ -328,6 +328,7 @@ class Hard(Frame):
                 self.letter22.configure(state='normal')
                 self.letter23.configure(state='normal')
                 self.letter24.configure(state='normal')
+
             elif self.curword == 4:
                 self.letter19.configure(state='disabled')
                 self.letter20.configure(state='disabled')
@@ -342,6 +343,7 @@ class Hard(Frame):
                 self.letter28.configure(state='normal')
                 self.letter29.configure(state='normal')
                 self.letter30.configure(state='normal')
+
             elif self.curword == 5:
                 self.letter25.configure(state='disabled')
                 self.letter26.configure(state='disabled')
@@ -356,6 +358,7 @@ class Hard(Frame):
                 self.letter34.configure(state='normal')
                 self.letter35.configure(state='normal')
                 self.letter36.configure(state='normal')
+
             elif self.curword == 6:
                 self.letter31.configure(state='disabled')
                 self.letter32.configure(state='disabled')
@@ -375,30 +378,3 @@ class Hard(Frame):
     def onclick_change(self, event=None):
         self.letter1.tag_add(f'{self.letter1r}')
         self.letter1.tag_config(f'{self.letter1r}', background = 'green', foreground = 'white')
-
-
-
-    # def check_guess(self): # callback function
-
-        """testing = self.letter1w1.get()
-        self.test.delete(0.0, END)
-        self.test.insert(0.0, testing+'omg')"""
-
-        """while guess != self.hardword:
-            pass
-
-        word_single = []
-        for i in guess:
-            word_single.append(i)
-        letter = Label[i] = i
-
-        self.delete(0.0, END)
-        self.letter1.insert(0.0, letter)"""
-
-#root = Tk()
-
-#root.bind('<Return>, retrieve_word1')
-
-#root.title("Hard")
-#app = Hard(root)
-#root.mai

@@ -7,15 +7,14 @@ from tkinter import simpledialog
 from os import path
 
 class Easy(Frame):
-
     def __init__(self, master):
-
         super(Easy, self).__init__(master)
         self.file = ("midyear_4letterwords.txt")
         self.create_widgets_e(master)
-    
-    def choose_word(self,file):
+        self.choose_word(self.file)
+        self.curword = 0
 
+    def choose_word(self,file):
         fourletter = open(file)
 
         self.fourletterlist = []
@@ -38,14 +37,21 @@ class Easy(Frame):
     
     def create_widgets_e(self, root):
 #        canvas = Canvas()        
-        root.geometry("400x600")
-        root.maxsize(400, 600)
+        root.geometry("450x640")
+        root.maxsize(450, 640)
         root.config(bg = "#F8EDEB")
 
-        self.frame = Frame(root, width = 300, height = 440, bg = "#F9DCC4")
+        self.button2 = Button(root, command = self.onclick_change, width = 50, height = 600, bg = '#fcba03')
+
+        self.frame = Frame(root, width = 350, height = 520, bg = "#F9DCC4")
         self.frame.place(x = 20, y = 20, relx = 0.08, rely = 0.08)
 
         Label(self.frame, text = "EASY MODE", font=("Consolas", 13), bg = "#F9DCC4").place(relx = 0.5, rely = 0.05, anchor = N)
+        self.button_bg = Button(self.frame, command = self.retrieve_word1, width = 15, height = 2, text='Guess', bg = '#DDBEA9')
+        self.hint_btn = Button(self.frame, command=self.request_hint, width=3, height=2, text='Hint', bg='#0000FF', fg='#ffffff')
+        rel_x = .12
+
+        rel_y = .14
 
         self.letter1 = Text(self.frame, width = 4, height = 2.4, font = ("Consolas"), bg = "#F8EDEB")
         self.letter1.place(relx = 0.2, rely = 0.14, anchor = N)
@@ -55,7 +61,6 @@ class Easy(Frame):
         self.letter3.place(relx = 0.6, rely = 0.14, anchor = N)
         self.letter4 = Text(self.frame, width = 4, height = 2.4, font = ("Consolas"), bg = "#F8EDEB")
         self.letter4.place(relx = 0.8, rely = 0.14, anchor = N)
-
 
         self.letter5 = Text(self.frame, width = 4, height = 2.4, font = ("Consolas"), bg = "#F8EDEB")
         self.letter5.place(relx = 0.2, rely = 0.28, anchor = N)
@@ -101,7 +106,8 @@ class Easy(Frame):
         self.letter23.place(relx = 0.6, rely = 0.80, anchor = N)
         self.letter24 = Text(self.frame, width = 4, height = 2.4, font = ("Consolas"), bg = "#F8EDEB")
         self.letter24.place(relx = 0.8, rely = 0.80, anchor = N)
-
+        self.button_bg.place(relx = 0.4, rely = rel_y+.77, anchor = N)
+        self.hint_btn.place(relx = 0.8, rely = rel_y+.77, anchor = N)
 
     def request_hint(self):
         open(path.expanduser('~/.wordlescore'), 'a+').close()
@@ -131,8 +137,8 @@ class Easy(Frame):
                 file.write(str(score - 250))
                 file.truncate()
             while True:
-                n = simpledialog.askstring('Letter', 'Which letter do you want to reveal? (1, 2, 3, 4, 5, or 6)?')
-                if n not in ['1', '2', '3', '4', '5', '6']:
+                n = simpledialog.askstring('Letter', 'Which letter do you want to reveal? (1, 2, 3, or 4)?')
+                if n not in ['1', '2', '3', '4']:
                     mb.showinfo('Invalid', 'Invalid input')
                     continue
                 n = int(n)
@@ -145,7 +151,7 @@ class Easy(Frame):
 
     def retrieve_word1(self):
 
-        for i in range(36):
+        for i in range(24):
             setattr(self, f'letter{i + 1}r', getattr(self, f'letter{i + 1}').get(1.0, 'end-1c'))
 
         word = ''
@@ -233,19 +239,19 @@ class Easy(Frame):
             for l in word.lower():
                 if self.easyword[i] == l:
                     self.correct[i] = True
-                    getattr(self, 'letter' + str((self.curword * 6) + (i + 1))).configure(bg='#00ff00')
+                    getattr(self, 'letter' + str((self.curword * 4) + (i + 1))).configure(bg='#00ff00')
                     if l in seen:
                         seen[l] += 1
                     else:
                         seen[l] = 1
 
                 else:
-                    getattr(self, 'letter' + str((self.curword * 6) + (i + 1))).configure(bg='#808080')
+                    getattr(self, 'letter' + str((self.curword * 4) + (i + 1))).configure(bg='#808080')
                 i += 1
             i = 0
             for l in word.lower():
                 if self.easyword[i] != l and l in self.easyword and seen[l] < self.easyword.count(l):
-                    getattr(self, 'letter' + str((self.curword * 6) + (i + 1))).configure(bg='#ffff00')
+                    getattr(self, 'letter' + str((self.curword * 4) + (i + 1))).configure(bg='#ffff00')
                     if l in seen:
                         seen[l] += 1
                     else:
@@ -273,6 +279,7 @@ class Easy(Frame):
                 self.letter10.configure(state='normal')
                 self.letter11.configure(state='normal')
                 self.letter12.configure(state='normal')
+
             elif self.curword == 3:
 
                 self.letter9.configure(state='disabled')
@@ -284,7 +291,19 @@ class Easy(Frame):
                 self.letter14.configure(state='normal')
                 self.letter15.configure(state='normal')
                 self.letter16.configure(state='normal')
+
             elif self.curword == 4:
+                self.letter13.configure(state='disabled')
+                self.letter14.configure(state='disabled')
+                self.letter15.configure(state='disabled')
+                self.letter16.configure(state='disabled')
+
+                self.letter17.configure(state='normal')
+                self.letter18.configure(state='normal')
+                self.letter19.configure(state='normal')
+                self.letter20.configure(state='normal')
+
+            elif self.curword == 5:
                 self.letter17.configure(state='disabled')
                 self.letter18.configure(state='disabled')
                 self.letter19.configure(state='disabled')
@@ -294,12 +313,13 @@ class Easy(Frame):
                 self.letter22.configure(state='normal')
                 self.letter23.configure(state='normal')
                 self.letter24.configure(state='normal')
-
-            elif self.curword == 5:
+            
+            elif self.curword == 6:
                 self.letter21.configure(state='disabled')
                 self.letter22.configure(state='disabled')
                 self.letter23.configure(state='disabled')
                 self.letter24.configure(state='disabled')
+
 
                 self.winfo_toplevel().attributes('-topmost', False)
                 mb.showinfo("Game over", f"You lost. The word was: {self.easyword}")
