@@ -16,6 +16,7 @@ class Application(Frame):
         self.shop_screen = None
 
     def update_score(self):
+        open(path.expanduser('~/.wordlescore'), 'a+').close()
         with open(path.expanduser('~/.wordlescore'), 'r+') as file:
             score = file.read().strip()
             try:
