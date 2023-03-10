@@ -62,7 +62,8 @@ class Application(Frame):
         canvas.pack()
 
         self.update_score()
-
+        
+        
     def setup_easy(self):
         root = Tk()
         root.attributes('-topmost', True)

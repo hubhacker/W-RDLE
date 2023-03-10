@@ -34,7 +34,6 @@ class Easy(Frame):
         self.correct = [False, False, False, False, False, False]
         print(self.easyword)
 
-    
     def create_widgets_e(self, root):
 #        canvas = Canvas()        
         root.geometry("450x640")
@@ -108,6 +107,7 @@ class Easy(Frame):
         self.letter24.place(relx = 0.8, rely = 0.80, anchor = N)
         self.button_bg.place(relx = 0.4, rely = rel_y+.77, anchor = N)
         self.hint_btn.place(relx = 0.8, rely = rel_y+.77, anchor = N)
+
 
     def request_hint(self):
         open(path.expanduser('~/.wordlescore'), 'a+').close()
