@@ -130,23 +130,23 @@ class Intermediate(Frame):
             except:
                 file.write('0')
                 score = 0
-        if score < 250:
+        if score < 150:
             self.winfo_toplevel().attributes('-topmost', False)
-            mb.showerror("Too few points", f"A hint costs 250 points. You only have {score} points")
+            mb.showerror("Too few points", f"A hint costs 150 points. You only have {score} points")
             self.winfo_toplevel().attributes('-topmost', True)
             return
 
         self.winfo_toplevel().attributes('-topmost', False)
-        answer = mb.askyesno('Confirm Hint Purchase for 250 Points',
-            'Are you sure you want to buy a hint for 250 points? ' +
-            f'Your balance after this transaction will be {score - 250} points')
+        answer = mb.askyesno('Confirm Hint Purchase for 150 Points',
+            'Are you sure you want to buy a hint for 150 points? ' +
+            f'Your balance after this transaction will be {score - 150} points')
         if not answer:
             mb.showinfo('Canceled', 'The transaction has been canceled.')
         else:
             open(path.expanduser('~/.wordlescore'), 'a+').close()
             with open(path.expanduser('~/.wordlescore'), 'r+') as file:
                 file.seek(0)
-                file.write(str(score - 250))
+                file.write(str(score - 150))
                 file.truncate()
             while True:
                 n = simpledialog.askstring('Letter', 'Which letter do you want to reveal? (1, 2, 3, 4, or 5)?')
@@ -222,10 +222,7 @@ class Intermediate(Frame):
                     score = 0
                 file.seek(0)
                 file.write(str(score + 250))
-            conj = 'y'
-            if self.curword + 1 != 1:
-                conj = 'ies'
-            mb.showinfo("You win!!!", f"You got the word correct in {self.curword + 1} tr{conj}: {self.intermediateword}.\n" + "You have gained 250 points!")
+            mb.showinfo("You win!!!", f"You got the word correct in {self.curword + 1} tries: {self.intermediateword}.\n" + "You have gained 250 points!")
             self.winfo_toplevel().destroy()
         else:
             self.button_bg.configure(state=tkinter.DISABLED)
