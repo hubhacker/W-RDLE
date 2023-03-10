@@ -1,13 +1,8 @@
 from tkinter import *
-from game_manager import GameManager
 from easy_gamemode import Easy
 from intermediate_gamemode import Intermediate
 from hard_gamemode import Hard
-
-#from easy_gamemode import Easy
-#from intermediate_gamemode import Intermediate
-#from hard_gamemode import Hard
-#from shop import Shop
+from os import path
 
 class Application(Frame):
 
@@ -19,7 +14,18 @@ class Application(Frame):
         self.intermediate_screen = None
         self.hard_screen = None
         self.shop_screen = None
-        #self.callback_on_easy = callback_on_easy
+
+    def update_score(self):
+        with open(path.expanduser('~/.wordlescore'), 'r+') as file:
+            score = file.read().strip()
+            try:
+                score = int(score)
+            except:
+                file.write('0')
+                score = 0
+            self.score_label.configure(text=f'Points: {score}')
+        self.after(2500, self.update_score)
+
 
     def create_widgets(self):
         canvas = Canvas()
@@ -32,6 +38,8 @@ class Application(Frame):
         Label(root, text = "Choose a gamemode", font=("Consolas", 10), fg = "black").place(x=50,y=120)
         Label(root, text = "to the right.", font=("Consolas", 10), fg = "black").place(x=60,y=140)
 
+        self.score_label = Label(root, text='Points: --', font=('Consolas', 12), fg='black', bg='yellow')
+        self.score_label.place(x=5, y=180)
         Label(root, text = "Instructions", font=("Consolas", 20), fg = "black").place(x=30,y=250)
         Label(root, text = "How to Play", font=("Consolas", 13), fg = "black").place(x=30,y=285)
         Label(root, text = "Wordle is a puzzle game that allows the users to puzzle", font=("Consolas", 8), fg = "black").place(x=30,y=320)
@@ -44,7 +52,7 @@ class Application(Frame):
         Label(root, text = "turn green, the letters that are in the wrong place but", font=("Consolas", 8), fg = "black").place(x=30,y=460)
         Label(root, text = "somewhere in the word turn yellow, and the completely wrong", font=("Consolas", 8), fg = "black").place(x=22,y=480)
         Label(root, text = "letters turn gray. Try your best to guess the word, have fun!", font=("Consolas", 8), fg = "black").place(x=22,y=500)
-        
+
         canvas.create_line(2, 27, 500, 27, width=2)
         canvas.create_line(2, 230, 500, 230, width=2)
 
@@ -52,25 +60,30 @@ class Application(Frame):
         canvas.create_line(2, 235, 500, 235, dash=(7), width=2)
         canvas.pack()
 
+        self.update_score()
+
     def setup_easy(self):
         root = Tk()
+        root.attributes('-topmost', True)
         root.title("EASY MODE")
         app = Easy(root)
 
     def setup_intermediate(self):
         root = Tk()
+        root.attributes('-topmost', True)
         root.title("INTERMEDIATE MODE")
         app = Intermediate(root)
 
     def setup_hard(self):
         root = Tk()
+        root.attributes('-topmost', True)
         root.title("HARD MODE")
         app = Hard(root)
 
     def setup_shop(self):
         pass
 
-root = Tk() 
+root = Tk()
 root.title("W♾RDLE - Home Page")
 root.geometry("400x600")
 app = Application(root)
