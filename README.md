@@ -1,4 +1,4 @@
-***Remodeled Version of Wordle***
+# Remodeled Version of Wordle
 
 
 **Difficulty Levels**
